@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JJO-DEVELOPERS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -31,12 +32,12 @@
 
   <section id="servicios" class="content">
     <h2>Qué ofrecemos</h2>
-    <div class="cards">
-      <div class="card">
+    <div class="cards-propias">
+      <div class="card-propia">
         <h3>Aplicaciones de gestión de stock</h3>
         <p>Desarrollamos herramientas para controlar inventario, pedidos y proveedores de forma sencilla y visual.</p>
       </div>
-      <div class="card">
+      <div class="card-propia">
         <h3>Soluciones con IA</h3>
         <p>Automatiza tareas con inteligencia artificial: reservas telefónicas, respuestas automáticas y más.</p>
       </div>
@@ -46,9 +47,20 @@
   <section id="contacto" class="content contacto">
     <h2>DATOS DE CONTACTO</h2>
     <p class="lead">¿Quieres colaborar o necesitas una aplicación para tu empresa? Escríbenos:</p>
-    <div class="contact-buttons">
-      <a href="mailto:jjodevelopers@gmail.com" class="contact-btn mail">Enviar correo</a>
-      <a href="https://instagram.com/jjo.developers" target="_blank" class="contact-btn insta">Instagram</a>
+    
+    <!-- Contenedor centrado -->
+    <div class="d-flex justify-content-center gap-2 flex-wrap">
+      <!-- Correo -->
+      <a href="mailto:jjodevelopers@gmail.com" class="btn btn-primary d-flex align-items-center"  style="background-color: #256868; color: #fff;"> 
+        <span class="me-2">✉️</span>
+        jjodevelopers@gmail.com
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://instagram.com/jjo.developers" target="_blank" class="btn btn-danger d-flex align-items-center" style="background-color: #256868; color: #fff;">
+        <span class="me-2">📸</span>
+        @jjo.developers
+      </a>
     </div>
   </section>
 
@@ -57,5 +69,6 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
