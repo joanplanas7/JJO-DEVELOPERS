@@ -10,3 +10,7 @@ const nav = document.getElementById("nav");
 menuBtn.addEventListener("click", () => {
   nav.classList.toggle("show");
 });
+
+
+const añoActual = new Date().getFullYear();
+document.getElementById("anio").textContent = añoActual;
