@@ -121,6 +121,59 @@ button:hover {
   box-shadow: 0 0 25px #00ffff40;
 }
 
+.card-titulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #00ffff;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #00ffff30;
+  padding-bottom: 12px;
+}
+
+.card-icon {
+  font-size: 1.4em;
+  flex-shrink: 0;
+}
+
+.card-desc {
+  color: #aaa;
+  font-size: 0.9em;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* CONTACTO */
+.contacto-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+a.btn-contacto {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #00ffff !important;
+  color: #0d0d0d !important;
+  text-decoration: none !important;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1em;
+  transition: all 0.3s;
+}
+
+a.btn-contacto:hover {
+  background-color: #00cccc !important;
+  color: #0d0d0d !important;
+  transform: scale(1.05);
+}
+
 /* FOOTER */
 footer {
   text-align: center;
@@ -188,41 +241,5 @@ footer {
 
   button {
     padding: 8px 16px;
-  }
-
-  .contacto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #00ffff12, #ffffff04);
-  }
-
-
-  .btn-mail {
-    background-color: #00ffff;
-    color: #0d0d0d;
-    border-radius: 25px;
-    font-weight: 600;
-    padding: 10px 20px;
-    transition: all 0.3s;
-  }
-
-  .btn-mail:hover {
-    background-color: #00cccc;
-  }
-
-  .btn-ig {
-    background: linear-gradient(45deg, #ff007a, #ffbf00);
-    color: #fff;
-    border-radius: 25px;
-    font-weight: 600;
-    padding: 10px 20px;
-    transition: all 0.3s;
-  }
-
-  .btn-ig:hover {
-    background: linear-gradient(45deg, #ff3399, #ffcc33);
   }
 }
