@@ -27,7 +27,7 @@ header {
 
 header h1 {
   font-size: 1.6em;
-  color: #00ffff;
+  color: #60a5fa;
 }
 
 nav {
@@ -42,7 +42,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #00ffff;
+  color: #60a5fa;
 }
 
 /* BOTÓN MENÚ (MÓVIL) */
@@ -50,14 +50,14 @@ nav a:hover {
   display: none;
   font-size: 1.8em;
   cursor: pointer;
-  color: #00ffff;
+  color: #60a5fa;
 }
 
 /* HERO */
 .hero {
   text-align: center;
   padding: 120px 20px;
-  background: linear-gradient(135deg, #00ffff20, #ffffff05);
+  background: linear-gradient(135deg, #60a5fa20, #ffffff05);
 }
 
 .hero h2 {
@@ -72,7 +72,7 @@ nav a:hover {
 }
 
 button {
-  background-color: #00ffff;
+  background-color: #60a5fa;
   color: #0d0d0d;
   border: none;
   padding: 10px 20px;
@@ -84,7 +84,7 @@ button {
 
 button:hover {
   transform: scale(1.05);
-  background-color: #00cccc;
+  background-color: #3b82f6;
 }
 
 /* SECCIONES */
@@ -96,7 +96,7 @@ button:hover {
 .content h2 {
   margin-bottom: 30px;
   font-size: 1.8em;
-  color: #00ffff;
+  color: #60a5fa;
 }
 
 /* CARDS */
@@ -112,13 +112,13 @@ button:hover {
   border-radius: 15px;
   padding: 30px;
   width: 300px;
-  box-shadow: 0 0 15px #00ffff20;
+  box-shadow: 0 0 15px #60a5fa20;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card-propia:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 25px #00ffff40;
+  box-shadow: 0 0 25px #60a5fa40;
 }
 
 .card-titulo {
@@ -127,9 +127,9 @@ button:hover {
   gap: 12px;
   font-size: 1.2em;
   font-weight: 700;
-  color: #00ffff;
+  color: #60a5fa;
   margin-bottom: 14px;
-  border-bottom: 1px solid #00ffff30;
+  border-bottom: 1px solid #60a5fa30;
   padding-bottom: 12px;
 }
 
@@ -158,7 +158,7 @@ a.btn-contacto {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background-color: #00ffff !important;
+  background-color: #60a5fa !important;
   color: #0d0d0d !important;
   text-decoration: none !important;
   padding: 12px 28px;
@@ -169,7 +169,7 @@ a.btn-contacto {
 }
 
 a.btn-contacto:hover {
-  background-color: #00cccc !important;
+  background-color: #3b82f6 !important;
   color: #0d0d0d !important;
   transform: scale(1.05);
 }
