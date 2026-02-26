@@ -11,6 +11,13 @@ menuBtn.addEventListener("click", () => {
   nav.classList.toggle("show");
 });
 
+// Cerrar menú al pulsar un enlace
+nav.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("show");
+  });
+});
+
 
 const añoActual = new Date().getFullYear();
 document.getElementById("anio").textContent = añoActual;
