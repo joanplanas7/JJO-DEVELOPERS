@@ -353,6 +353,28 @@ footer {
   transform: scale(1.05);
 }
 
+/* ANIMACIÓN HERO (carga de página) */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero h2     { animation: fadeInDown 0.7s ease both; }
+.hero p      { animation: fadeInDown 0.7s ease 0.2s both; }
+.hero button { animation: fadeInDown 0.7s ease 0.4s both; }
+
+/* ANIMACIONES DE SCROLL */
+.fade-up {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* -------------------- */
 /* ESTILOS RESPONSIVE   */
 /* -------------------- */
