@@ -208,14 +208,18 @@ footer {
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
-  margin-top: 10px;
+  margin: 10px auto 0;
+  max-width: 1000px;
+  padding: 0 20px;
 }
 
 .equipo-card {
   background-color: #111;
   border-radius: 15px;
-  padding: 30px;
-  width: 320px;
+  padding: 35px 40px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 460px;
   box-shadow: 0 0 15px #60a5fa20;
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
@@ -231,8 +235,8 @@ footer {
 
 .equipo-foto-wrapper {
   position: relative;
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 20px;
