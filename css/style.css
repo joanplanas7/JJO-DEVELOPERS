@@ -45,6 +45,49 @@ nav a:hover {
   color: #60a5fa;
 }
 
+/* GRUPO DERECHA DEL HEADER */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* SELECTOR DE IDIOMA */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 0.78em;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  padding: 5px 7px;
+  border-radius: 4px;
+  transition: color 0.3s;
+  letter-spacing: 0.05em;
+}
+
+.lang-btn:hover {
+  color: #60a5fa;
+}
+
+.lang-btn.active {
+  color: #60a5fa;
+  font-weight: 700;
+}
+
+.lang-sep {
+  color: #333;
+  font-size: 0.75em;
+  user-select: none;
+}
+
 /* BOTÓN MENÚ (MÓVIL) */
 .menu-btn {
   display: none;
