@@ -24,8 +24,15 @@ const translations = {
     'ia.title':   'Automatizaciones con IA',
     'ia.desc':    'Automatizamos procesos de tu negocio con inteligencia artificial: agentes virtuales que atienden clientes, captación y seguimiento automatizado de leads, chatbots inteligentes, clasificación de datos y mucho más. Trabaja más eficientemente sin aumentar el equipo.',
 
-    'contacto.title': 'DATOS DE CONTACTO',
-    'contacto.desc':  '¿Quieres colaborar o necesitas una aplicación para tu empresa? Escríbenos:',
+    'contacto.title':   'DATOS DE CONTACTO',
+    'contacto.desc':    '¿Quieres colaborar o necesitas una aplicación para tu empresa? Escríbenos:',
+    'contacto.divider': 'o contáctanos directamente:',
+
+    'form.name':    'Tu nombre',
+    'form.email':   'Tu email',
+    'form.company': 'Tu empresa (opcional)',
+    'form.message': '¿En qué podemos ayudarte?',
+    'form.submit':  'Enviar mensaje',
 
     'footer.desc': 'Desarrollamos soluciones digitales',
   },
@@ -55,8 +62,15 @@ const translations = {
     'ia.title':   'AI Automations',
     'ia.desc':    'We automate your business processes with artificial intelligence: virtual agents that serve customers, automated lead capture and follow-up, smart chatbots, data classification and much more. Work more efficiently without growing your team.',
 
-    'contacto.title': 'CONTACT INFO',
-    'contacto.desc':  'Want to collaborate or need an app for your business? Write to us:',
+    'contacto.title':   'CONTACT INFO',
+    'contacto.desc':    'Want to collaborate or need an app for your business? Write to us:',
+    'contacto.divider': 'or contact us directly:',
+
+    'form.name':    'Your name',
+    'form.email':   'Your email',
+    'form.company': 'Your company (optional)',
+    'form.message': 'How can we help you?',
+    'form.submit':  'Send message',
 
     'footer.desc': 'We develop digital solutions',
   },
@@ -86,8 +100,15 @@ const translations = {
     'ia.title':   'Automatitzacions amb IA',
     'ia.desc':    "Automatitzem processos del teu negoci amb intel·ligència artificial: agents virtuals que atenen clients, captació i seguiment automatitzat de leads, chatbots intel·ligents, classificació de dades i molt més. Treballa de manera més eficient sense augmentar l'equip.",
 
-    'contacto.title': 'DADES DE CONTACTE',
-    'contacto.desc':  "Vols col·laborar o necessites una aplicació per a la teva empresa? Escriu-nos:",
+    'contacto.title':   'DADES DE CONTACTE',
+    'contacto.desc':    "Vols col·laborar o necessites una aplicació per a la teva empresa? Escriu-nos:",
+    'contacto.divider': "o contacta'ns directament:",
+
+    'form.name':    'El teu nom',
+    'form.email':   'El teu email',
+    'form.company': 'La teva empresa (opcional)',
+    'form.message': 'En què et podem ajudar?',
+    'form.submit':  'Enviar missatge',
 
     'footer.desc': 'Desenvolupem solucions digitals',
   }
@@ -109,6 +130,14 @@ function setLanguage(lang) {
     const key = el.dataset.i18n;
     if (translations[lang][key] !== undefined) {
       el.innerHTML = translations[lang][key];
+    }
+  });
+
+  // Update placeholders
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.dataset.i18nPlaceholder;
+    if (translations[lang][key] !== undefined) {
+      el.placeholder = translations[lang][key];
     }
   });
 }

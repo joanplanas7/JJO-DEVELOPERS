@@ -106,6 +106,22 @@
     <h2 class="fade-up" data-i18n="contacto.title">DATOS DE CONTACTO</h2>
     <p class="lead fade-up" data-i18n="contacto.desc">¿Quieres colaborar o necesitas una aplicación para tu empresa? Escríbenos:</p>
 
+    <form id="contacto-form" class="contacto-form fade-up">
+      <input type="hidden" name="access_key" value="98f7f341-5942-43dd-a4e2-210e385b1a57">
+      <input type="hidden" name="subject" value="Nuevo mensaje desde JJO Developers">
+      <input type="checkbox" name="botcheck" style="display:none">
+
+      <input type="text" name="name" data-i18n-placeholder="form.name" placeholder="Tu nombre" required>
+      <input type="email" name="email" data-i18n-placeholder="form.email" placeholder="Tu email" required>
+      <input type="text" name="empresa" data-i18n-placeholder="form.company" placeholder="Tu empresa (opcional)">
+      <textarea name="message" data-i18n-placeholder="form.message" placeholder="¿En qué podemos ayudarte?" rows="5" required></textarea>
+
+      <button type="submit" data-i18n="form.submit">Enviar mensaje</button>
+      <div id="form-result" class="form-result"></div>
+    </form>
+
+    <p class="contacto-divider fade-up" data-i18n="contacto.divider">o contáctanos directamente:</p>
+
     <div class="contacto-btns fade-up">
       <a href="mailto:jjodevelopers@gmail.com" class="btn-contacto">
         <i class="bi bi-envelope-fill"></i>
