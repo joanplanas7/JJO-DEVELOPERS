@@ -1,8 +1,9 @@
 const translations = {
   es: {
-    'nav.sobre':       'Quiénes somos',
-    'nav.servicios':   'Servicios',
-    'nav.contacto':    'Contacto',
+    'nav.sobre':    'Quiénes somos',
+    'nav.servicios':'Servicios',
+    'nav.proceso':  'Cómo trabajamos',
+    'nav.contacto': 'Contacto',
 
     'hero.title': 'Soluciones digitales para tu negocio',
     'hero.desc':  'Ayudamos a tu empresa a digitalizarse con soluciones prácticas y personalizadas.',
@@ -15,6 +16,17 @@ const translations = {
 
     'joan.desc':  'Desarrollador especializado en ciberseguridad, lleva desde 2021 construyendo ERPs a medida para gestionar departamentos completos en entornos empresariales reales. En 2025 descubrió el potencial transformador de la inteligencia artificial aplicada a las automatizaciones y desde entonces no ha parado. Actualmente se forma de forma intensiva en IA y automatización de procesos, convencido de que esta tecnología cambiará la forma en que trabajan las empresas.',
     'jordi.desc': 'Diseñador gráfico desde 2020, con experiencia en el diseño de videojuegos y proyectos visuales digitales. En 2024 amplió su horizonte y dio el salto a la programación web, combinando su ojo creativo con la lógica del desarrollo. Con la explosión de la IA en 2025, encontró su siguiente reto: especializarse en automatizaciones inteligentes para llevar los proyectos al siguiente nivel.',
+
+    'proceso.title':    'Cómo trabajamos',
+    'proceso.subtitle': 'Un proceso claro y transparente, pensado para que siempre sepas en qué punto estamos.',
+    'paso1.title': 'Estudio',
+    'paso1.desc':  'Analizamos tu negocio y tus procesos actuales para entender exactamente qué necesitas y cómo podemos ayudarte.',
+    'paso2.title': 'Propuesta',
+    'paso2.desc':  'Diseñamos una solución personalizada y te presentamos un plan claro: funcionalidades, plazos y presupuesto sin sorpresas.',
+    'paso3.title': 'Desarrollo',
+    'paso3.desc':  'Construimos tu solución con actualizaciones periódicas para que siempre estés al tanto del progreso.',
+    'paso4.title': 'Entrega',
+    'paso4.desc':  'Lanzamos el producto, formamos a tu equipo y ofrecemos soporte continuo para garantizar el éxito a largo plazo.',
 
     'servicios.title': 'Qué ofrecemos',
     'erp.title':  'ERPs a medida',
@@ -38,9 +50,10 @@ const translations = {
   },
 
   en: {
-    'nav.sobre':       'About us',
-    'nav.servicios':   'Services',
-    'nav.contacto':    'Contact',
+    'nav.sobre':    'About us',
+    'nav.servicios':'Services',
+    'nav.proceso':  'How we work',
+    'nav.contacto': 'Contact',
 
     'hero.title': 'Digital solutions for your business',
     'hero.desc':  'We help your business go digital with practical, personalized solutions.',
@@ -53,6 +66,17 @@ const translations = {
 
     'joan.desc':  'Developer specialized in cybersecurity, has been building custom ERPs to manage complete departments in real business environments since 2021. In 2025 he discovered the transformative potential of AI applied to automation and hasn\'t stopped since. Currently training intensively in AI and process automation, convinced that this technology will change how businesses operate.',
     'jordi.desc': 'Graphic designer since 2020, with experience in video game design and digital visual projects. In 2024 he made the leap into web development, combining his creative eye with technical skills. With the AI revolution in 2025, he found his next challenge: specializing in intelligent automations to take projects to the next level.',
+
+    'proceso.title':    'How we work',
+    'proceso.subtitle': 'A clear and transparent process, designed so you always know where we are.',
+    'paso1.title': 'Analysis',
+    'paso1.desc':  'We analyze your business and current processes to understand exactly what you need and how we can help.',
+    'paso2.title': 'Proposal',
+    'paso2.desc':  'We design a personalized solution and present you with a clear plan: features, timelines and budget with no surprises.',
+    'paso3.title': 'Development',
+    'paso3.desc':  'We build your solution with regular updates so you\'re always informed about the progress.',
+    'paso4.title': 'Delivery',
+    'paso4.desc':  'We launch the product, train your team and offer ongoing support to ensure long-term success.',
 
     'servicios.title': 'What we offer',
     'erp.title':  'Custom ERPs',
@@ -76,9 +100,10 @@ const translations = {
   },
 
   ca: {
-    'nav.sobre':       'Qui som',
-    'nav.servicios':   'Serveis',
-    'nav.contacto':    'Contacte',
+    'nav.sobre':    'Qui som',
+    'nav.servicios':'Serveis',
+    'nav.proceso':  'Com treballem',
+    'nav.contacto': 'Contacte',
 
     'hero.title': 'Solucions digitals per al teu negoci',
     'hero.desc':  'Ajudem la teva empresa a digitalitzar-se amb solucions pràctiques i personalitzades.',
@@ -91,6 +116,17 @@ const translations = {
 
     'joan.desc':  "Desenvolupador especialitzat en ciberseguretat, porta des del 2021 construint ERPs a mida per gestionar departaments complets en entorns empresarials reals. El 2025 va descobrir el potencial transformador de la intel·ligència artificial aplicada a les automatitzacions i des d'aleshores no ha parat. Actualment es forma de manera intensiva en IA i automatització de processos, convençut que aquesta tecnologia canviarà la manera de treballar de les empreses.",
     'jordi.desc': "Dissenyador gràfic des del 2020, amb experiència en el disseny de videojocs i projectes visuals digitals. El 2024 va ampliar el seu horitzó i va fer el salt a la programació web, combinant el seu ull creatiu amb la lògica del desenvolupament. Amb l'explosió de la IA el 2025, va trobar el seu proper repte: especialitzar-se en automatitzacions intel·ligents per portar els projectes al següent nivell.",
+
+    'proceso.title':    'Com treballem',
+    'proceso.subtitle': 'Un procés clar i transparent, pensat perquè sempre sàpigues en quin punt estem.',
+    'paso1.title': 'Estudi',
+    'paso1.desc':  'Analitzem el teu negoci i els teus processos actuals per entendre exactament què necessites i com podem ajudar-te.',
+    'paso2.title': 'Proposta',
+    'paso2.desc':  'Dissenyem una solució personalitzada i et presentem un pla clar: funcionalitats, terminis i pressupost sense sorpreses.',
+    'paso3.title': 'Desenvolupament',
+    'paso3.desc':  'Construïm la teva solució amb actualitzacions periòdiques perquè sempre estiguis al corrent del progrés.',
+    'paso4.title': 'Lliurament',
+    'paso4.desc':  "Llancem el producte, formem el teu equip i oferim suport continuat per garantir l'èxit a llarg termini.",
 
     'servicios.title': 'Què oferim',
     'erp.title':  'ERPs a mida',

@@ -75,10 +75,10 @@ const scrollObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 
-// Stagger para grupos de cards
-document.querySelectorAll('.equipo-cards, .cards-propias').forEach(container => {
-  container.querySelectorAll('.equipo-card, .card-propia').forEach((card, i) => {
-    card.style.transitionDelay = `${i * 0.15}s`;
+// Stagger para grupos de cards y pasos
+document.querySelectorAll('.equipo-cards, .cards-propias, .proceso-steps').forEach(container => {
+  container.querySelectorAll('.equipo-card, .card-propia, .proceso-step').forEach((el, i) => {
+    el.style.transitionDelay = `${i * 0.15}s`;
   });
 });
 
