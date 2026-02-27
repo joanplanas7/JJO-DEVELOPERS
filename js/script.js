@@ -76,8 +76,8 @@ const scrollObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 // Stagger para grupos de cards y pasos
-document.querySelectorAll('.equipo-cards, .cards-propias, .proceso-steps').forEach(container => {
-  container.querySelectorAll('.equipo-card, .card-propia, .proceso-step').forEach((el, i) => {
+document.querySelectorAll('.equipo-cards, .cards-propias, .proceso-steps, .ejemplos-grid').forEach(container => {
+  container.querySelectorAll('.equipo-card, .card-propia, .proceso-step, .ejemplo-card').forEach((el, i) => {
     el.style.transitionDelay = `${i * 0.15}s`;
   });
 });

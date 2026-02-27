@@ -47,6 +47,15 @@ const translations = {
     'form.submit':  'Enviar mensaje',
 
     'footer.desc': 'Desarrollamos soluciones digitales',
+
+    'ejemplos.title':   'Automatizaciones que ya hemos creado',
+    'ejemplos.subtitle':'Flujos reales que podemos adaptar a tu negocio',
+    'ejemplo1.title': 'Chatbot de citas por WhatsApp',
+    'ejemplo1.desc':  'Un asistente virtual que atiende mensajes de tus clientes por WhatsApp y guarda las citas automáticamente en tu Google Calendar, sin intervención manual.',
+    'ejemplo2.title': 'Edición y publicación de fotos por Telegram',
+    'ejemplo2.desc':  'Envías una foto por Telegram, el flujo la edita automáticamente y la sube a tus redes sociales, lista para publicar.',
+    'ejemplo3.title': 'Lector de facturas a Excel',
+    'ejemplo3.desc':  'Detecta nuevas facturas en PDF en una carpeta concreta de Google Drive, extrae la información clave y la guarda organizada en un Excel automáticamente.',
   },
 
   en: {
@@ -97,6 +106,15 @@ const translations = {
     'form.submit':  'Send message',
 
     'footer.desc': 'We develop digital solutions',
+
+    'ejemplos.title':   'Automations we\'ve already built',
+    'ejemplos.subtitle':'Real workflows we can adapt to your business',
+    'ejemplo1.title': 'WhatsApp appointment chatbot',
+    'ejemplo1.desc':  'A virtual assistant that handles your clients\' WhatsApp messages and automatically saves appointments to your Google Calendar, no manual work needed.',
+    'ejemplo2.title': 'Photo editing and posting via Telegram',
+    'ejemplo2.desc':  'Send a photo via Telegram and the workflow automatically edits it and uploads it to your social networks, ready to publish.',
+    'ejemplo3.title': 'Invoice reader to Excel',
+    'ejemplo3.desc':  'Detects new PDF invoices in a specific Google Drive folder, extracts key information and automatically saves it organized in an Excel file.',
   },
 
   ca: {
@@ -147,6 +165,15 @@ const translations = {
     'form.submit':  'Enviar missatge',
 
     'footer.desc': 'Desenvolupem solucions digitals',
+
+    'ejemplos.title':   'Automatitzacions que ja hem creat',
+    'ejemplos.subtitle':"Fluxos reals que podem adaptar al teu negoci",
+    'ejemplo1.title': 'Chatbot de cites per WhatsApp',
+    'ejemplo1.desc':  "Un assistent virtual que atén els missatges dels teus clients per WhatsApp i guarda les cites automàticament al teu Google Calendar, sense intervenció manual.",
+    'ejemplo2.title': 'Edició i publicació de fotos per Telegram',
+    'ejemplo2.desc':  "Envies una foto per Telegram, el flux l'edita automàticament i la puja a les teves xarxes socials, llesta per publicar.",
+    'ejemplo3.title': 'Lector de factures a Excel',
+    'ejemplo3.desc':  "Detecta noves factures en PDF en una carpeta concreta de Google Drive, extreu la informació clau i la guarda organitzada en un Excel automàticament.",
   }
 };
 
