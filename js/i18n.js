@@ -128,7 +128,7 @@ const translations = {
     'hero.btn':   "Contacta'ns",
 
     'sobre.title':  'Qui som',
-    'sobre.p1':     'A <strong>JJO</strong> creem programari a mida per a empreses que volen recuperar el seu temps. Automatitzem els processos que consumeixen hores cada setmana (gestió de dades, comunicacions, fluxos de treball) perquè et puguis centrar en el que de veritat importa: fer créixer el teu negoci.',
+    'sobre.p1':     'A <strong>JJO</strong> creem programes a mida per a empreses que volen recuperar el seu temps. Automatitzem els processos que consumeixen hores cada setmana (gestió de dades, comunicacions, fluxos de treball) perquè et puguis centrar en el que de veritat importa: fer créixer el teu negoci.',
     'sobre.p2':     "Creiem que la tecnologia ha de treballar per a les persones, no al revés. Per això cada solució que desenvolupem està pensada per ser simple, eficient i totalment adaptada a les necessitats reals de cada client.",
     'sobre.equipo': "Som <strong>Jordi</strong> i <strong>Joan</strong>, dos informàtics apassionats pel món de l'automatització:",
 
