@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre las 5 tecnologías más usadas en 2025: IA generativa, Python, React, automatización con n8n y cloud computing. Guía práctica para empresas.">
+  <title>Las 5 tecnologías más usadas en 2025 | JJO Developers</title>
+  <link rel="icon" type="image/webp" href="../img/favicon.webp">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+      line-height: 1.8;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px 40px;
+      border-bottom: 1px solid #1e1e1e;
+    }
+
+    header a {
+      color: #60a5fa;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.3em;
+    }
+
+    .articulo-hero {
+      background: linear-gradient(135deg, #60a5fa18, #ffffff05);
+      padding: 70px 20px 50px;
+      text-align: center;
+    }
+
+    .articulo-hero .categoria {
+      display: inline-block;
+      background-color: #60a5fa18;
+      color: #60a5fa;
+      font-size: 0.78em;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .articulo-hero h1 {
+      font-size: 2.1em;
+      font-weight: 700;
+      max-width: 760px;
+      margin: 0 auto 16px;
+      line-height: 1.3;
+    }
+
+    .articulo-hero .meta {
+      color: #666;
+      font-size: 0.83em;
+    }
+
+    .articulo-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    .articulo-body p {
+      color: #bbb;
+      font-size: 0.95em;
+      margin-bottom: 20px;
+    }
+
+    .tech-card {
+      background-color: #111;
+      border-radius: 14px;
+      padding: 30px 28px;
+      margin: 40px 0;
+      border-left: 4px solid #60a5fa;
+      position: relative;
+    }
+
+    .tech-card .num {
+      position: absolute;
+      top: -16px;
+      left: 24px;
+      background-color: #60a5fa;
+      color: #0d0d0d;
+      font-weight: 700;
+      font-size: 0.8em;
+      padding: 4px 14px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+    }
+
+    .tech-card h2 {
+      font-size: 1.25em;
+      font-weight: 700;
+      color: #f5f5f5;
+      margin-bottom: 14px;
+      margin-top: 6px;
+    }
+
+    .tech-card p {
+      color: #aaa;
+      font-size: 0.9em;
+      margin-bottom: 14px;
+    }
+
+    .tech-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .tech-tag {
+      display: inline-block;
+      background-color: #60a5fa15;
+      color: #60a5fa;
+      font-size: 0.75em;
+      font-weight: 600;
+      padding: 3px 12px;
+      border-radius: 12px;
+      margin: 0 4px 8px 0;
+    }
+
+    .tags-row {
+      margin-bottom: 16px;
+    }
+
+    .highlight-box {
+      background-color: #60a5fa0d;
+      border: 1px solid #60a5fa25;
+      border-radius: 10px;
+      padding: 22px 26px;
+      margin: 40px 0;
+    }
+
+    .highlight-box p {
+      margin: 0;
+      color: #ccc;
+      font-size: 0.93em;
+    }
+
+    .cta-section {
+      text-align: center;
+      margin-top: 64px;
+      padding-top: 40px;
+      border-top: 1px solid #1e1e1e;
+    }
+
+    .cta-section p {
+      color: #888;
+      font-size: 0.9em;
+      margin-bottom: 24px;
+    }
+
+    .btn-cta {
+      display: inline-block;
+      background-color: #60a5fa;
+      color: #0d0d0d;
+      text-decoration: none;
+      padding: 14px 36px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1em;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn-cta:hover {
+      background-color: #3b82f6;
+      color: #0d0d0d;
+      transform: scale(1.05);
+    }
+
+    .intro-lead {
+      font-size: 1.05em !important;
+      color: #ddd !important;
+      border-left: 3px solid #60a5fa40;
+      padding-left: 18px;
+      margin-bottom: 40px !important;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      background-color: #111;
+      color: #555;
+      font-size: 0.85em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="https://jjodevelopers.cloud/">← JJO</a>
+  </header>
+
+  <div class="articulo-hero">
+    <span class="categoria">Tendencias Tech</span>
+    <h1>Las 5 tecnologías más usadas en 2025</h1>
+    <p class="meta">JJO Developers · 28 febrero 2026 · 7 min de lectura</p>
+  </div>
+
+  <div class="articulo-body">
+
+    <p class="intro-lead">2025 ha sido el año en que la inteligencia artificial dejó de ser un concepto de laboratorio para convertirse en una herramienta del día a día. Pero la IA no ha llegado sola: ha venido acompañada de un ecosistema de tecnologías que están redefiniendo cómo se construyen los productos digitales, cómo trabajan las empresas y qué perfiles se demandan en el mercado.</p>
+
+    <p>Si quieres saber qué tecnologías dominan el panorama tech en 2025 —y por qué deberías conocerlas aunque no seas programador—, sigue leyendo.</p>
+
+    <!-- TECH 1 -->
+    <div class="tech-card">
+      <span class="num">#1</span>
+      <h2>Inteligencia Artificial Generativa</h2>
+      <div class="tags-row">
+        <span class="tech-tag">ChatGPT</span>
+        <span class="tech-tag">Claude</span>
+        <span class="tech-tag">Gemini</span>
+        <span class="tech-tag">Midjourney</span>
+      </div>
+      <p>No hay lista de tecnologías en 2025 que no empiece aquí. Los modelos de lenguaje grande (LLMs) han pasado de ser una curiosidad a una infraestructura básica en empresas de todos los tamaños. Se usan para redactar contenido, generar código, atender clientes, analizar documentos y tomar decisiones automatizadas.</p>
+      <p>Lo que ha cambiado este año no es solo la capacidad de los modelos, sino la facilidad para integrarlos. A través de APIs como la de Anthropic o OpenAI, cualquier empresa puede añadir inteligencia artificial a sus flujos de trabajo sin necesidad de entrenar sus propios modelos. La barrera de entrada ha caído enormemente.</p>
+    </div>
+
+    <!-- TECH 2 -->
+    <div class="tech-card">
+      <span class="num">#2</span>
+      <h2>Python</h2>
+      <div class="tags-row">
+        <span class="tech-tag">Data Science</span>
+        <span class="tech-tag">Automatización</span>
+        <span class="tech-tag">Backend</span>
+        <span class="tech-tag">IA</span>
+      </div>
+      <p>Python lleva años siendo el lenguaje más popular del mundo y en 2025 sigue sin tener rival serio. La razón es simple: es el lenguaje por excelencia para trabajar con IA, machine learning y automatización de procesos. Librerías como <strong>LangChain</strong>, <strong>FastAPI</strong> o <strong>Pandas</strong> han convertido Python en el pegamento que conecta modelos de IA con aplicaciones reales.</p>
+      <p>Si una empresa quiere automatizar algo —extraer datos de facturas, clasificar emails o construir un agente que tome decisiones—, casi siempre hay Python en algún punto del proceso.</p>
+    </div>
+
+    <!-- TECH 3 -->
+    <div class="tech-card">
+      <span class="num">#3</span>
+      <h2>React y el ecosistema JavaScript</h2>
+      <div class="tags-row">
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">Next.js</span>
+        <span class="tech-tag">TypeScript</span>
+        <span class="tech-tag">Node.js</span>
+      </div>
+      <p>En el mundo del desarrollo web, React sigue siendo el rey. Más del 40% de los proyectos web profesionales en 2025 usan React o alguna de sus variantes (Next.js, Remix). La combinación de <strong>React + TypeScript + Next.js</strong> se ha convertido en el stack estándar para construir aplicaciones web modernas, rápidas y escalables.</p>
+      <p>TypeScript, en particular, ha ganado una adopción masiva porque reduce errores en proyectos grandes y hace el código mucho más mantenible a largo plazo. Ya no es opcional: es la norma.</p>
+    </div>
+
+    <!-- TECH 4 -->
+    <div class="tech-card">
+      <span class="num">#4</span>
+      <h2>Automatización con n8n y Make</h2>
+      <div class="tags-row">
+        <span class="tech-tag">n8n</span>
+        <span class="tech-tag">Make</span>
+        <span class="tech-tag">Zapier</span>
+        <span class="tech-tag">No-code</span>
+      </div>
+      <p>Las plataformas de automatización visual han explotado en popularidad durante 2025. Herramientas como <strong>n8n</strong> o <strong>Make</strong> permiten conectar aplicaciones, mover datos entre sistemas y crear flujos de trabajo complejos sin escribir apenas código. Se han convertido en el puente entre el mundo de la IA y las operaciones del día a día de una empresa.</p>
+      <p>Un ejemplo muy común: conectar un formulario web con un CRM, enviar una notificación por WhatsApp, actualizar una hoja de cálculo y generar un resumen con IA, todo sin intervención humana. Lo que antes requería un desarrollador dedicado, hoy lo puede configurar alguien con conocimientos medios.</p>
+    </div>
+
+    <!-- TECH 5 -->
+    <div class="tech-card">
+      <span class="num">#5</span>
+      <h2>Cloud Computing y arquitecturas serverless</h2>
+      <div class="tags-row">
+        <span class="tech-tag">AWS</span>
+        <span class="tech-tag">Google Cloud</span>
+        <span class="tech-tag">Vercel</span>
+        <span class="tech-tag">Serverless</span>
+      </div>
+      <p>El cloud no es nuevo, pero en 2025 su adopción ha alcanzado un punto de madurez donde ya no es una ventaja competitiva: es una obligación. Las arquitecturas <strong>serverless</strong> —donde pagas solo por lo que usas y no tienes que gestionar servidores— han democratizado el despliegue de aplicaciones, permitiendo a equipos pequeños operar con la infraestructura de empresas grandes.</p>
+      <p>Plataformas como <strong>Vercel</strong> o <strong>Cloudflare Workers</strong> han hecho que lanzar una aplicación web escalable sea cuestión de minutos, no de días. Esto ha cambiado completamente la velocidad a la que pueden crecer los proyectos digitales.</p>
+    </div>
+
+    <div class="highlight-box">
+      <p><strong>Conclusión:</strong> Lo que une estas cinco tecnologías es la velocidad. Todas están diseñadas para que equipos pequeños puedan construir y operar cosas que antes requerían recursos enormes. Si eres una empresa y todavía no has empezado a adoptar alguna de ellas, 2025 es el momento de hacerlo.</p>
+    </div>
+
+    <p>En <a href="https://jjodevelopers.cloud/" style="color:#60a5fa;">JJO</a> trabajamos con la mayoría de estas tecnologías en nuestros proyectos. Si quieres llevar tu negocio al siguiente nivel con automatizaciones inteligentes, webs profesionales o software a medida, estamos aquí para ayudarte.</p>
+
+    <div class="cta-section">
+      <p>¿Quieres aplicar alguna de estas tecnologías en tu negocio? Cuéntanos tu proyecto.</p>
+      <a href="https://jjodevelopers.cloud/" class="btn-cta">Visitar JJO</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 JJO — Desarrollamos soluciones digitales</p>
+  </footer>
+
+</body>
+</html>
