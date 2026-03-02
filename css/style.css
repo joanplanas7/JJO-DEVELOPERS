@@ -25,9 +25,22 @@ header {
   z-index: 10;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  width: auto;
+  height: 30px;
+  display: block;
+}
+
 header h1 {
   font-size: 1.6em;
   color: #60a5fa;
+  margin: 0;
 }
 
 nav {
@@ -725,6 +738,14 @@ footer {
 }
 
 @media (max-width: 480px) {
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-logo {
+    height: 24px;
+  }
+
   header h1 {
     font-size: 1.3em;
   }
