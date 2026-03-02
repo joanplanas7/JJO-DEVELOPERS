@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
 * {
   margin: 0;
@@ -37,8 +37,9 @@ header {
   display: block;
 }
 
-header h1 {
+.brand-name {
   font-size: 1.6em;
+  font-weight: 700;
   color: #60a5fa;
   margin: 0;
 }
@@ -101,7 +102,7 @@ nav a:hover {
   user-select: none;
 }
 
-/* BOTÓN MENÚ (MÓVIL) */
+/* BOTON MENU MOVIL */
 .menu-btn {
   display: none;
   font-size: 1.8em;
@@ -116,15 +117,36 @@ nav a:hover {
   background: linear-gradient(135deg, #60a5fa20, #ffffff05);
 }
 
-.hero h2 {
-  font-size: 2em;
-  margin-bottom: 15px;
+.hero-kicker {
+  margin: 0 auto 16px;
+  color: #60a5fa;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
-.hero p {
-  max-width: 600px;
-  margin: 0 auto 30px;
+.hero h1 {
+  max-width: 840px;
+  margin: 0 auto 20px;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.12;
+}
+
+.hero-lead,
+.hero-support {
+  max-width: 760px;
+  margin: 0 auto 16px;
   color: #ccc;
+}
+
+.hero-lead {
+  font-size: 1.06rem;
+}
+
+.hero-support {
+  margin-bottom: 30px;
+  color: #9ca3af;
 }
 
 button {
@@ -153,6 +175,16 @@ button:hover {
   margin-bottom: 30px;
   font-size: 1.8em;
   color: #60a5fa;
+}
+
+.content-alt {
+  background: linear-gradient(180deg, #111 0%, #0d0d0d 100%);
+}
+
+.section-intro {
+  max-width: 840px;
+  margin: 0 auto 42px;
+  color: #c4c4c4;
 }
 
 /* CARDS */
@@ -201,45 +233,7 @@ button:hover {
   text-align: left;
 }
 
-/* CONTACTO */
-.contacto-btns {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-a.btn-contacto {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background-color: #60a5fa !important;
-  color: #0d0d0d !important;
-  text-decoration: none !important;
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 1em;
-  transition: all 0.3s;
-}
-
-a.btn-contacto:hover {
-  background-color: #3b82f6 !important;
-  color: #0d0d0d !important;
-  transform: scale(1.05);
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #111;
-  font-size: 0.9em;
-  color: #888;
-}
-
-/* QUIÉNES SOMOS */
+/* QUIENES SOMOS */
 .sobre-intro {
   max-width: 700px;
   margin: 0 auto 30px;
@@ -366,7 +360,124 @@ footer {
   transform: scale(1.05);
 }
 
-/* CÓMO TRABAJAMOS */
+/* EJEMPLOS DE AUTOMATIZACIONES */
+.ejemplos-section {
+  margin-top: 60px;
+}
+
+.ejemplos-titulo {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #f5f5f5;
+  margin-bottom: 8px;
+}
+
+.ejemplos-subtitle {
+  color: #666;
+  font-size: 0.85em;
+  margin-bottom: 28px;
+}
+
+.ejemplos-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.ejemplo-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: #111;
+  border-radius: 12px;
+  padding: 20px 24px;
+  border-left: 3px solid #60a5fa25;
+  text-align: left;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.ejemplo-card:hover {
+  border-left-color: #60a5fa;
+  box-shadow: 0 0 18px #60a5fa15;
+}
+
+.ejemplo-icon {
+  font-size: 1.8em;
+  color: #60a5fa;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ejemplo-card h4 {
+  font-size: 0.95em;
+  font-weight: 700;
+  color: #f5f5f5;
+  margin-bottom: 6px;
+}
+
+.ejemplo-card p {
+  font-size: 0.85em;
+  color: #aaa;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ARTICULOS */
+.article-grid {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.article-card {
+  display: block;
+  text-decoration: none;
+  background: linear-gradient(180deg, #151515, #101010);
+  border: 1px solid #1d2633;
+  border-radius: 18px;
+  padding: 24px;
+  text-align: left;
+  color: inherit;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  border-color: #60a5fa55;
+  box-shadow: 0 16px 36px #00000040;
+}
+
+.article-tag {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #60a5fa18;
+  color: #93c5fd;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.article-card h3 {
+  font-size: 1.05rem;
+  color: #f3f4f6;
+  margin-bottom: 12px;
+  line-height: 1.45;
+}
+
+.article-card p {
+  color: #9ca3af;
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+/* PROCESO */
 .proceso-subtitle {
   color: #ccc;
   font-size: 0.95em;
@@ -383,7 +494,6 @@ footer {
   position: relative;
 }
 
-/* Línea conectora entre círculos */
 .proceso-steps::before {
   content: '';
   position: absolute;
@@ -460,7 +570,62 @@ footer {
   line-height: 1.65;
 }
 
-/* FORMULARIO DE CONTACTO */
+/* FAQ */
+.faq-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+
+.faq-item {
+  text-align: left;
+  background: #111;
+  border: 1px solid #1f1f1f;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.faq-item h3 {
+  color: #f5f5f5;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.faq-item p {
+  color: #aaa;
+  margin: 0;
+}
+
+/* CONTACTO */
+.contacto-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+a.btn-contacto {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #60a5fa !important;
+  color: #0d0d0d !important;
+  text-decoration: none !important;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1em;
+  transition: all 0.3s;
+}
+
+a.btn-contacto:hover {
+  background-color: #3b82f6 !important;
+  color: #0d0d0d !important;
+  transform: scale(1.05);
+}
+
 .contacto-form {
   max-width: 580px;
   margin: 0 auto 20px;
@@ -546,15 +711,47 @@ footer {
   margin: 10px 0 20px;
 }
 
-/* ANIMACIÓN HERO (carga de página) */
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to   { opacity: 1; transform: translateY(0); }
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  font-size: 0.9em;
+  color: #888;
 }
 
-.hero h2     { animation: fadeInDown 0.7s ease both; }
-.hero p      { animation: fadeInDown 0.7s ease 0.2s both; }
-.hero button { animation: fadeInDown 0.7s ease 0.4s both; }
+/* ANIMACION HERO */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-kicker {
+  animation: fadeInDown 0.7s ease both;
+}
+
+.hero h1 {
+  animation: fadeInDown 0.7s ease 0.12s both;
+}
+
+.hero-lead {
+  animation: fadeInDown 0.7s ease 0.24s both;
+}
+
+.hero-support {
+  animation: fadeInDown 0.7s ease 0.36s both;
+}
+
+.hero button {
+  animation: fadeInDown 0.7s ease 0.48s both;
+}
 
 /* ANIMACIONES DE SCROLL */
 .fade-up {
@@ -568,11 +765,39 @@ footer {
   transform: translateY(0);
 }
 
-/* -------------------- */
-/* ESTILOS RESPONSIVE   */
-/* -------------------- */
+/* BOTON FLOTANTE WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7em;
+  box-shadow: 0 4px 16px #25D36640;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+}
 
-/* Tablets y móviles */
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px #25D36660;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .article-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
   header {
     padding: 15px 20px;
@@ -602,14 +827,6 @@ footer {
     padding: 100px 20px;
   }
 
-  .hero h2 {
-    font-size: 1.6em;
-  }
-
-  .card {
-    width: 90%;
-  }
-
   .equipo-cards {
     flex-direction: column;
     align-items: center;
@@ -636,7 +853,6 @@ footer {
     padding: 0;
   }
 
-  /* Conector vertical entre pasos en móvil */
   .proceso-step:not(:last-child)::after {
     content: '';
     display: block;
@@ -645,96 +861,10 @@ footer {
     background-color: #60a5fa35;
     margin: 0 auto;
   }
-}
 
-/* EJEMPLOS DE AUTOMATIZACIONES */
-.ejemplos-section {
-  margin-top: 60px;
-}
-
-.ejemplos-titulo {
-  font-size: 1.2em;
-  font-weight: 700;
-  color: #f5f5f5;
-  margin-bottom: 8px;
-}
-
-.ejemplos-subtitle {
-  color: #666;
-  font-size: 0.85em;
-  margin-bottom: 28px;
-}
-
-.ejemplos-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  max-width: 780px;
-  margin: 0 auto;
-}
-
-.ejemplo-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  background-color: #111;
-  border-radius: 12px;
-  padding: 20px 24px;
-  border-left: 3px solid #60a5fa25;
-  text-align: left;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.ejemplo-card:hover {
-  border-left-color: #60a5fa;
-  box-shadow: 0 0 18px #60a5fa15;
-}
-
-.ejemplo-icon {
-  font-size: 1.8em;
-  color: #60a5fa;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.ejemplo-card h4 {
-  font-size: 0.95em;
-  font-weight: 700;
-  color: #f5f5f5;
-  margin-bottom: 6px;
-}
-
-.ejemplo-card p {
-  font-size: 0.85em;
-  color: #aaa;
-  line-height: 1.65;
-  margin: 0;
-}
-
-/* BOTÓN FLOTANTE WHATSAPP */
-.whatsapp-float {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 100;
-  background-color: #25D366;
-  color: #fff;
-  border-radius: 50%;
-  width: 56px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.7em;
-  box-shadow: 0 4px 16px #25D36640;
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-decoration: none;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 24px #25D36660;
-  color: #fff;
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
@@ -746,16 +876,15 @@ footer {
     height: 24px;
   }
 
-  header h1 {
+  .brand-name {
     font-size: 1.3em;
   }
 
-  .hero h2 {
-    font-size: 1.4em;
-  }
-
-  .hero p {
-    font-size: 0.9em;
+  .hero-lead,
+  .hero-support,
+  .section-intro,
+  .faq-item p {
+    font-size: 0.92rem;
   }
 
   button {

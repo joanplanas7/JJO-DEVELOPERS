@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Los agentes IA en 2026 ya no son ciencia ficción: toman decisiones, ejecutan tareas y automatizan procesos completos. Descubre cómo cambian las empresas.">
-  <title>El uso de agentes IA en 2026: qué son y cómo están cambiando las empresas | JJO</title>
-  <link rel="icon" type="image/webp" href="../img/favicon.webp">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Los agentes IA en 2026 ya no son ciencia ficción: toman decisiones, ejecutan tareas y automatizan procesos completos. Descubre cómo cambian las empresas.">
+    <title>
+      El uso de agentes IA en 2026: qué son y cómo están cambiando las empresas | JJO
+    </title>
+    <link rel="icon" type="image/webp" href="../img/favicon.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #0d0d0d;
       color: #f5f5f5;
       line-height: 1.8;
     }
-
     header {
       background-color: #111;
       padding: 20px 40px;
       border-bottom: 1px solid #1e1e1e;
     }
-
     header a {
       color: #60a5fa;
       text-decoration: none;
       font-weight: 700;
       font-size: 1.3em;
     }
-
     .articulo-hero {
       background: linear-gradient(135deg, #60a5fa18, #ffffff05);
       padding: 70px 20px 50px;
       text-align: center;
     }
-
     .articulo-hero .categoria {
       display: inline-block;
       background-color: #60a5fa18;
@@ -50,7 +50,6 @@
       border-radius: 20px;
       margin-bottom: 20px;
     }
-
     .articulo-hero h1 {
       font-size: 2.1em;
       font-weight: 700;
@@ -58,31 +57,26 @@
       margin: 0 auto 16px;
       line-height: 1.3;
     }
-
     .articulo-hero .meta {
       color: #666;
       font-size: 0.83em;
     }
-
     .articulo-body {
       max-width: 780px;
       margin: 0 auto;
       padding: 60px 24px 80px;
     }
-
     .articulo-body h2 {
       font-size: 1.3em;
       font-weight: 700;
       color: #60a5fa;
       margin: 48px 0 16px;
     }
-
     .articulo-body p {
       color: #bbb;
       font-size: 0.95em;
       margin-bottom: 20px;
     }
-
     .intro-lead {
       font-size: 1.05em !important;
       color: #ddd !important;
@@ -90,13 +84,11 @@
       padding-left: 18px;
       margin-bottom: 40px !important;
     }
-
     .articulo-body ul {
       list-style: none;
       padding: 0;
       margin-bottom: 24px;
     }
-
     .articulo-body ul li {
       color: #bbb;
       font-size: 0.93em;
@@ -104,14 +96,12 @@
       position: relative;
       border-bottom: 1px solid #1a1a1a;
     }
-
     .articulo-body ul li::before {
       content: '→';
       color: #60a5fa;
       position: absolute;
       left: 0;
     }
-
     .ejemplo-box {
       background-color: #111;
       border-radius: 12px;
@@ -119,7 +109,6 @@
       margin: 28px 0;
       border-top: 3px solid #60a5fa;
     }
-
     .ejemplo-box .label {
       font-size: 0.72em;
       font-weight: 700;
@@ -128,43 +117,41 @@
       text-transform: uppercase;
       margin-bottom: 10px;
     }
-
     .ejemplo-box p {
       margin: 0;
       color: #aaa;
       font-size: 0.88em;
     }
-
     .diferencia-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
       margin: 28px 0;
     }
-
     .diferencia-item {
       background-color: #111;
       border-radius: 10px;
       padding: 18px 20px;
     }
-
     .diferencia-item .d-titulo {
       font-size: 0.78em;
       font-weight: 700;
       margin-bottom: 8px;
     }
-
-    .diferencia-item.antes .d-titulo { color: #888; }
-    .diferencia-item.ahora .d-titulo { color: #60a5fa; }
-
+    .diferencia-item.antes .d-titulo {
+      color: #888;
+    }
+    .diferencia-item.ahora .d-titulo {
+      color: #60a5fa;
+    }
     .diferencia-item p {
       font-size: 0.83em !important;
       color: #777 !important;
       margin: 0 !important;
     }
-
-    .diferencia-item.ahora p { color: #aaa !important; }
-
+    .diferencia-item.ahora p {
+      color: #aaa !important;
+    }
     .highlight-box {
       background-color: #60a5fa0d;
       border: 1px solid #60a5fa25;
@@ -172,26 +159,22 @@
       padding: 22px 26px;
       margin: 40px 0;
     }
-
     .highlight-box p {
       margin: 0;
       color: #ccc;
       font-size: 0.93em;
     }
-
     .cta-section {
       text-align: center;
       margin-top: 64px;
       padding-top: 40px;
       border-top: 1px solid #1e1e1e;
     }
-
     .cta-section p {
       color: #888;
       font-size: 0.9em;
       margin-bottom: 24px;
     }
-
     .btn-cta {
       display: inline-block;
       background-color: #60a5fa;
@@ -203,13 +186,11 @@
       font-size: 1em;
       transition: background-color 0.3s, transform 0.3s;
     }
-
     .btn-cta:hover {
       background-color: #3b82f6;
       color: #0d0d0d;
       transform: scale(1.05);
     }
-
     footer {
       text-align: center;
       padding: 24px;
@@ -217,118 +198,205 @@
       color: #555;
       font-size: 0.85em;
     }
-
     @media (max-width: 600px) {
-      .diferencia-grid { grid-template-columns: 1fr; }
-      .articulo-hero h1 { font-size: 1.6em; }
+      .diferencia-grid {
+        grid-template-columns: 1fr;
+      }
+      .articulo-hero h1 {
+        font-size: 1.6em;
+      }
     }
-  </style>
-</head>
-<body>
-
-  <header>
-    <a href="https://jjodevelopers.cloud/">← JJO</a>
-  </header>
-
-  <div class="articulo-hero">
-    <span class="categoria">Inteligencia Artificial</span>
-    <h1>Agentes IA en 2026: qué son y cómo están cambiando las empresas</h1>
-    <p class="meta">JJO · 28 febrero 2026 · 8 min de lectura</p>
-  </div>
-
-  <div class="articulo-body">
-
-    <p class="intro-lead">Durante años escuchamos hablar de la inteligencia artificial como algo del futuro. En 2026, ese futuro ya es el presente. Y una de las piezas más transformadoras de este cambio tiene nombre concreto: los <strong>agentes IA</strong>. No son chatbots mejorados. Son sistemas capaces de razonar, planificar y actuar de forma autónoma para completar tareas complejas.</p>
-
-    <p>Si tienes una empresa y todavía no has oído hablar de los agentes IA, este artículo es para ti. Y si ya los conoces, quédate: puede que haya ángulos que todavía no habías considerado.</p>
-
-    <h2>¿Qué es exactamente un agente IA?</h2>
-
-    <p>Un agente IA es un sistema de inteligencia artificial que no solo responde preguntas, sino que <strong>toma decisiones y ejecuta acciones</strong> para alcanzar un objetivo. A diferencia de un chatbot tradicional, que simplemente genera texto en respuesta a lo que le dices, un agente puede:</p>
-
-    <ul>
-      <li>Descomponer un objetivo complejo en pasos más pequeños</li>
-      <li>Usar herramientas externas: buscar en internet, leer archivos, enviar emails, consultar bases de datos</li>
-      <li>Evaluar sus propios resultados y corregir el rumbo si algo no funciona</li>
-      <li>Trabajar de forma continua, sin que nadie tenga que supervisar cada paso</li>
-    </ul>
-
-    <p>En la práctica, esto significa que puedes decirle a un agente "analiza las ventas del último trimestre, identifica los productos con peor rendimiento y redacta un informe con recomendaciones" y el agente lo hace solo, de principio a fin.</p>
-
-    <h2>La diferencia entre antes y ahora</h2>
-
-    <p>Para entender el salto que representan los agentes, ayuda comparar cómo se hacían las cosas antes con cómo se hacen ahora:</p>
-
-    <div class="diferencia-grid">
-      <div class="diferencia-item antes">
-        <div class="d-titulo">Antes (automatización clásica)</div>
-        <p>Reglas fijas programadas por un desarrollador. Si pasa A, haz B. No sabe qué hacer ante situaciones inesperadas. Requiere mantenimiento constante.</p>
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="https://jjodevelopers.cloud/">
+        ← JJO
+      </a>
+    </header>
+    <div class="articulo-hero">
+      <span class="categoria">
+        Inteligencia Artificial
+      </span>
+      <h1>
+        Agentes IA en 2026: qué son y cómo están cambiando las empresas
+      </h1>
+      <p class="meta">
+        JJO · 28 febrero 2026 · 8 min de lectura
+      </p>
+    </div>
+    <div class="articulo-body">
+      <p class="intro-lead">
+        Durante años escuchamos hablar de la inteligencia artificial como algo del futuro. En 2026, ese futuro ya es el presente. Y una de las piezas más transformadoras de este cambio tiene nombre concreto: los
+        <strong>
+          agentes IA
+        </strong>
+        . No son chatbots mejorados. Son sistemas capaces de razonar, planificar y actuar de forma autónoma para completar tareas complejas.
+      </p>
+      <p>
+        Si tienes una empresa y todavía no has oído hablar de los agentes IA, este artículo es para ti. Y si ya los conoces, quédate: puede que haya ángulos que todavía no habías considerado.
+      </p>
+      <h2>
+        ¿Qué es exactamente un agente IA?
+      </h2>
+      <p>
+        Un agente IA es un sistema de inteligencia artificial que no solo responde preguntas, sino que
+        <strong>
+          toma decisiones y ejecuta acciones
+        </strong>
+        para alcanzar un objetivo. A diferencia de un chatbot tradicional, que simplemente genera texto en respuesta a lo que le dices, un agente puede:
+      </p>
+      <ul>
+        <li>
+          Descomponer un objetivo complejo en pasos más pequeños
+        </li>
+        <li>
+          Usar herramientas externas: buscar en internet, leer archivos, enviar emails, consultar bases de datos
+        </li>
+        <li>
+          Evaluar sus propios resultados y corregir el rumbo si algo no funciona
+        </li>
+        <li>
+          Trabajar de forma continua, sin que nadie tenga que supervisar cada paso
+        </li>
+      </ul>
+      <p>
+        En la práctica, esto significa que puedes decirle a un agente "analiza las ventas del último trimestre, identifica los productos con peor rendimiento y redacta un informe con recomendaciones" y el agente lo hace solo, de principio a fin.
+      </p>
+      <h2>
+        La diferencia entre antes y ahora
+      </h2>
+      <p>
+        Para entender el salto que representan los agentes, ayuda comparar cómo se hacían las cosas antes con cómo se hacen ahora:
+      </p>
+      <div class="diferencia-grid">
+        <div class="diferencia-item antes">
+          <div class="d-titulo">
+            Antes (automatización clásica)
+          </div>
+          <p>
+            Reglas fijas programadas por un desarrollador. Si pasa A, haz B. No sabe qué hacer ante situaciones inesperadas. Requiere mantenimiento constante.
+          </p>
+        </div>
+        <div class="diferencia-item ahora">
+          <div class="d-titulo">
+            Ahora (agentes IA)
+          </div>
+          <p>
+            Razonan sobre el contexto y adaptan su comportamiento. Manejan situaciones nuevas sin necesidad de reglas explícitas. Se pueden instruir en lenguaje natural.
+          </p>
+        </div>
       </div>
-      <div class="diferencia-item ahora">
-        <div class="d-titulo">Ahora (agentes IA)</div>
-        <p>Razonan sobre el contexto y adaptan su comportamiento. Manejan situaciones nuevas sin necesidad de reglas explícitas. Se pueden instruir en lenguaje natural.</p>
+      <h2>
+        ¿Dónde se están usando los agentes IA en 2026?
+      </h2>
+      <p>
+        Los casos de uso han crecido enormemente en el último año. Estos son algunos de los más extendidos:
+      </p>
+      <div class="ejemplo-box">
+        <div class="label">
+          Atención al cliente
+        </div>
+        <p>
+          Agentes que gestionan conversaciones por WhatsApp, web o email: responden dudas, consultan el estado de pedidos, escalan al equipo humano solo cuando es necesario y aprenden de cada interacción.
+        </p>
+      </div>
+      <div class="ejemplo-box">
+        <div class="label">
+          Gestión documental
+        </div>
+        <p>
+          Agentes que leen facturas, contratos o informes, extraen la información relevante, la clasifican y la almacenan en el sistema correspondiente. Sin intervención humana, sin errores de transcripción.
+        </p>
+      </div>
+      <div class="ejemplo-box">
+        <div class="label">
+          Ventas y seguimiento de leads
+        </div>
+        <p>
+          Agentes que detectan nuevos contactos, les envían mensajes personalizados de bienvenida, hacen seguimiento automático si no hay respuesta y avisan al equipo comercial cuando el lead está listo para cerrar.
+        </p>
+      </div>
+      <div class="ejemplo-box">
+        <div class="label">
+          Análisis y reporting
+        </div>
+        <p>
+          Agentes que recopilan datos de distintas fuentes, los analizan y generan informes periódicos con conclusiones accionables. Lo que antes costaba horas de trabajo de un analista, ahora ocurre automáticamente.
+        </p>
+      </div>
+      <h2>
+        ¿Necesito ser una gran empresa para usarlos?
+      </h2>
+      <p>
+        Esta es probablemente la pregunta más importante, y la respuesta es no. En 2026, gracias a plataformas como
+        <strong>
+          n8n
+        </strong>
+        ,
+        <strong>
+          Make
+        </strong>
+        o los propios servicios de API de los modelos más avanzados, implementar un agente IA está al alcance de cualquier empresa, independientemente de su tamaño.
+      </p>
+      <p>
+        Una tienda online puede tener un agente que gestione las devoluciones. Un despacho de abogados puede automatizar la revisión inicial de documentos. Un autónomo puede tener un agente que le organice la agenda y filtre los emails relevantes. El coste de entrada ha caído drásticamente y el retorno es inmediato.
+      </p>
+      <h2>
+        Los riesgos que hay que conocer
+      </h2>
+      <p>
+        Los agentes IA son potentes, pero no son infalibles. Hay aspectos a tener en cuenta antes de desplegarlos en procesos críticos:
+      </p>
+      <ul>
+        <li>
+          Pueden cometer errores si el objetivo está mal definido o el contexto es ambiguo
+        </li>
+        <li>
+          Necesitan acceso controlado a sistemas y datos: la seguridad es fundamental
+        </li>
+        <li>
+          Requieren supervisión humana en decisiones de alto impacto
+        </li>
+        <li>
+          Su rendimiento depende en gran medida de la calidad del modelo base que usan
+        </li>
+      </ul>
+      <p>
+        La clave está en empezar con procesos de bajo riesgo, medir los resultados y escalar progresivamente. No se trata de sustituir a las personas de golpe, sino de liberar su tiempo de las tareas repetitivas para que se centren en lo que realmente aporta valor.
+      </p>
+      <div class="highlight-box">
+        <p>
+          <strong>
+            En resumen:
+          </strong>
+          los agentes IA son la siguiente capa de la automatización. Si la primera ola automatizó tareas simples y repetitivas, esta nueva ola automatiza procesos complejos que antes requerían criterio humano. Las empresas que empiecen a adoptarlos ahora tendrán una ventaja real frente a las que esperen.
+        </p>
+      </div>
+      <p>
+        En
+        <a href="https://jjodevelopers.cloud/" style="color:#60a5fa;">
+          JJO
+        </a>
+        llevamos tiempo trabajando con agentes IA aplicados a procesos reales de empresas: desde la captación de clientes hasta la gestión documental. Si quieres explorar qué podría automatizarse en tu negocio, estaremos encantados de ayudarte.
+      </p>
+      <div class="cta-section">
+        <p>
+          ¿Quieres implementar agentes IA en tu empresa? Hablemos.
+        </p>
+        <a href="https://jjodevelopers.cloud/" class="btn-cta">
+          Visitar JJO
+        </a>
       </div>
     </div>
-
-    <h2>¿Dónde se están usando los agentes IA en 2026?</h2>
-
-    <p>Los casos de uso han crecido enormemente en el último año. Estos son algunos de los más extendidos:</p>
-
-    <div class="ejemplo-box">
-      <div class="label">Atención al cliente</div>
-      <p>Agentes que gestionan conversaciones por WhatsApp, web o email: responden dudas, consultan el estado de pedidos, escalan al equipo humano solo cuando es necesario y aprenden de cada interacción.</p>
-    </div>
-
-    <div class="ejemplo-box">
-      <div class="label">Gestión documental</div>
-      <p>Agentes que leen facturas, contratos o informes, extraen la información relevante, la clasifican y la almacenan en el sistema correspondiente. Sin intervención humana, sin errores de transcripción.</p>
-    </div>
-
-    <div class="ejemplo-box">
-      <div class="label">Ventas y seguimiento de leads</div>
-      <p>Agentes que detectan nuevos contactos, les envían mensajes personalizados de bienvenida, hacen seguimiento automático si no hay respuesta y avisan al equipo comercial cuando el lead está listo para cerrar.</p>
-    </div>
-
-    <div class="ejemplo-box">
-      <div class="label">Análisis y reporting</div>
-      <p>Agentes que recopilan datos de distintas fuentes, los analizan y generan informes periódicos con conclusiones accionables. Lo que antes costaba horas de trabajo de un analista, ahora ocurre automáticamente.</p>
-    </div>
-
-    <h2>¿Necesito ser una gran empresa para usarlos?</h2>
-
-    <p>Esta es probablemente la pregunta más importante, y la respuesta es no. En 2026, gracias a plataformas como <strong>n8n</strong>, <strong>Make</strong> o los propios servicios de API de los modelos más avanzados, implementar un agente IA está al alcance de cualquier empresa, independientemente de su tamaño.</p>
-
-    <p>Una tienda online puede tener un agente que gestione las devoluciones. Un despacho de abogados puede automatizar la revisión inicial de documentos. Un autónomo puede tener un agente que le organice la agenda y filtre los emails relevantes. El coste de entrada ha caído drásticamente y el retorno es inmediato.</p>
-
-    <h2>Los riesgos que hay que conocer</h2>
-
-    <p>Los agentes IA son potentes, pero no son infalibles. Hay aspectos a tener en cuenta antes de desplegarlos en procesos críticos:</p>
-
-    <ul>
-      <li>Pueden cometer errores si el objetivo está mal definido o el contexto es ambiguo</li>
-      <li>Necesitan acceso controlado a sistemas y datos: la seguridad es fundamental</li>
-      <li>Requieren supervisión humana en decisiones de alto impacto</li>
-      <li>Su rendimiento depende en gran medida de la calidad del modelo base que usan</li>
-    </ul>
-
-    <p>La clave está en empezar con procesos de bajo riesgo, medir los resultados y escalar progresivamente. No se trata de sustituir a las personas de golpe, sino de liberar su tiempo de las tareas repetitivas para que se centren en lo que realmente aporta valor.</p>
-
-    <div class="highlight-box">
-      <p><strong>En resumen:</strong> los agentes IA son la siguiente capa de la automatización. Si la primera ola automatizó tareas simples y repetitivas, esta nueva ola automatiza procesos complejos que antes requerían criterio humano. Las empresas que empiecen a adoptarlos ahora tendrán una ventaja real frente a las que esperen.</p>
-    </div>
-
-    <p>En <a href="https://jjodevelopers.cloud/" style="color:#60a5fa;">JJO</a> llevamos tiempo trabajando con agentes IA aplicados a procesos reales de empresas: desde la captación de clientes hasta la gestión documental. Si quieres explorar qué podría automatizarse en tu negocio, estaremos encantados de ayudarte.</p>
-
-    <div class="cta-section">
-      <p>¿Quieres implementar agentes IA en tu empresa? Hablemos.</p>
-      <a href="https://jjodevelopers.cloud/" class="btn-cta">Visitar JJO</a>
-    </div>
-
-  </div>
-
-  <footer>
-    <p>© 2026 JJO — Desarrollamos soluciones digitales</p>
-  </footer>
-
-</body>
+    <footer>
+      <p>
+        © 2026 JJO · Desarrollamos soluciones digitales
+      </p>
+    </footer>
+    <script src="../js/article-translations.js">
+    </script>
+    <script src="../js/article-i18n.js">
+    </script>
+  </body>
 </html>

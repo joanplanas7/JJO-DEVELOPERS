@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Descubre cómo usar Claude de Anthropic para programar webs más rápido: generación de código, depuración y automatización de tareas de desarrollo.">
-  <title>Cómo usar Claude para programar tu web más rápido | JJO Developers</title>
-  <link rel="icon" type="image/webp" href="../img/favicon.webp">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre cómo usar Claude de Anthropic para programar webs más rápido: generación de código, depuración y automatización de tareas de desarrollo.">
+    <title>
+      Cómo usar Claude para programar tu web más rápido | JJO Developers
+    </title>
+    <link rel="icon" type="image/webp" href="../img/favicon.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #0d0d0d;
       color: #f5f5f5;
       line-height: 1.8;
     }
-
     header {
       background-color: #111;
       padding: 20px 40px;
       border-bottom: 1px solid #1e1e1e;
     }
-
     header a {
       color: #60a5fa;
       text-decoration: none;
       font-weight: 700;
       font-size: 1.3em;
     }
-
     .articulo-hero {
       background: linear-gradient(135deg, #60a5fa18, #ffffff05);
       padding: 70px 20px 50px;
       text-align: center;
     }
-
     .articulo-hero .categoria {
       display: inline-block;
       background-color: #60a5fa18;
@@ -50,7 +50,6 @@
       border-radius: 20px;
       margin-bottom: 20px;
     }
-
     .articulo-hero h1 {
       font-size: 2.1em;
       font-weight: 700;
@@ -58,37 +57,31 @@
       margin: 0 auto 16px;
       line-height: 1.3;
     }
-
     .articulo-hero .meta {
       color: #666;
       font-size: 0.83em;
     }
-
     .articulo-body {
       max-width: 780px;
       margin: 0 auto;
       padding: 60px 24px 80px;
     }
-
     .articulo-body h2 {
       font-size: 1.35em;
       font-weight: 700;
       color: #60a5fa;
       margin: 48px 0 16px;
     }
-
     .articulo-body p {
       color: #bbb;
       font-size: 0.95em;
       margin-bottom: 20px;
     }
-
     .articulo-body ul {
       list-style: none;
       padding: 0;
       margin-bottom: 24px;
     }
-
     .articulo-body ul li {
       color: #bbb;
       font-size: 0.95em;
@@ -96,14 +89,12 @@
       position: relative;
       border-bottom: 1px solid #1a1a1a;
     }
-
     .articulo-body ul li::before {
       content: '→';
       color: #60a5fa;
       position: absolute;
       left: 0;
     }
-
     .code-block {
       background-color: #111;
       border: 1px solid #222;
@@ -117,7 +108,6 @@
       white-space: pre-wrap;
       overflow-x: auto;
     }
-
     .highlight-box {
       background-color: #60a5fa0d;
       border: 1px solid #60a5fa25;
@@ -125,26 +115,22 @@
       padding: 22px 26px;
       margin: 32px 0;
     }
-
     .highlight-box p {
       margin: 0;
       color: #ccc;
       font-size: 0.93em;
     }
-
     .cta-section {
       text-align: center;
       margin-top: 64px;
       padding-top: 40px;
       border-top: 1px solid #1e1e1e;
     }
-
     .cta-section p {
       color: #888;
       font-size: 0.9em;
       margin-bottom: 24px;
     }
-
     .btn-cta {
       display: inline-block;
       background-color: #60a5fa;
@@ -156,13 +142,11 @@
       font-size: 1em;
       transition: background-color 0.3s, transform 0.3s;
     }
-
     .btn-cta:hover {
       background-color: #3b82f6;
       color: #0d0d0d;
       transform: scale(1.05);
     }
-
     footer {
       text-align: center;
       padding: 24px;
@@ -170,86 +154,155 @@
       color: #555;
       font-size: 0.85em;
     }
-  </style>
-</head>
-<body>
-
-  <header>
-    <a href="https://jjodevelopers.cloud/">← JJO</a>
-  </header>
-
-  <div class="articulo-hero">
-    <span class="categoria">Herramientas IA</span>
-    <h1>Cómo usar Claude para programar tu web más rápido</h1>
-    <p class="meta">JJO · 28 febrero 2025 · 6 min de lectura</p>
-  </div>
-
-  <div class="articulo-body">
-
-    <p>Si todavía programas tu web de forma completamente manual, sin la ayuda de ninguna IA, estás tardando el doble de lo necesario. Herramientas como <strong>Claude</strong>, el modelo de lenguaje de Anthropic, han cambiado radicalmente la forma en que los desarrolladores escriben código, depuran errores y estructuran proyectos web. En este artículo te contamos cómo sacarle el máximo partido.</p>
-
-    <h2>¿Qué es Claude y por qué es diferente?</h2>
-
-    <p>Claude es un asistente de inteligencia artificial creado por Anthropic, diseñado para razonar con profundidad y generar respuestas precisas en contextos técnicos. A diferencia de otros modelos, destaca especialmente en tareas de programación porque no solo escribe código, sino que lo <strong>explica, lo revisa y propone mejoras</strong> de forma coherente.</p>
-
-    <p>Para el desarrollo web en particular, Claude es capaz de trabajar con HTML, CSS, JavaScript, frameworks como React o Vue, y también con lenguajes de backend como Python o PHP. Puede manejar conversaciones largas con mucho contexto, lo que lo convierte en un compañero ideal para proyectos que evolucionan a lo largo del tiempo.</p>
-
-    <h2>1. Generación de código a partir de una descripción</h2>
-
-    <p>Una de las aplicaciones más inmediatas es pedirle a Claude que genere componentes o secciones enteras a partir de una descripción en lenguaje natural. Por ejemplo:</p>
-
-    <div class="code-block">Prompt: "Crea una sección hero para una web de servicios digitales. Fondo oscuro, título grande, subtítulo y un botón de llamada a la acción. Usa solo HTML y CSS, sin dependencias externas."</div>
-
-    <p>El resultado es código limpio, semántico y listo para adaptar. Lo que antes podía llevar 20 minutos de trabajo se convierte en cuestión de segundos, dejándote tiempo para centrarte en la lógica del negocio y en la experiencia de usuario.</p>
-
-    <h2>2. Depuración y explicación de errores</h2>
-
-    <p>Claude es especialmente útil cuando tienes un error que no entiendes. Puedes pegarle el código roto, describir el comportamiento que ves y pedirle que identifique el problema. Va más allá de señalar el error: <strong>explica por qué ocurre</strong> y propone varias formas de solucionarlo.</p>
-
-    <p>Esto es especialmente valioso para desarrolladores que están aprendiendo, ya que cada corrección se convierte en una micro-lección. Pero también ahorra tiempo a los profesionales experimentados: a veces un segundo par de ojos —aunque sea artificial— encuentra en segundos lo que tú has pasado por alto durante media hora.</p>
-
-    <h2>3. Refactorización y mejora de código existente</h2>
-
-    <p>¿Tienes código que funciona pero sabes que podría estar mejor organizado? Claude puede revisar tu código y proponer una versión más limpia, más eficiente o más fácil de mantener. Algunos ejemplos concretos de lo que puede hacer:</p>
-
-    <ul>
-      <li>Convertir CSS repetitivo en variables y clases reutilizables</li>
-      <li>Reestructurar funciones JavaScript demasiado largas</li>
-      <li>Añadir accesibilidad (atributos ARIA, roles semánticos) a HTML existente</li>
-      <li>Optimizar consultas o llamadas a APIs</li>
-      <li>Adaptar componentes para que sean responsive sin romper el diseño</li>
-    </ul>
-
-    <h2>4. Generación de contenido y textos para la web</h2>
-
-    <p>Más allá del código, Claude también ayuda a redactar los textos que van dentro de la web: <em>copies</em> para secciones de servicios, descripciones de productos, textos de landing pages, FAQs o incluso artículos de blog como este. Todo manteniendo un tono consistente y adaptado a tu marca.</p>
-
-    <div class="highlight-box">
-      <p><strong>Consejo práctico:</strong> Cuanto más contexto le des a Claude sobre tu proyecto (colores, tono de voz, público objetivo, tecnologías que usas), mejores y más ajustados serán los resultados. Trata el prompt como si le estuvieras haciendo un briefing a un colaborador nuevo.</p>
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="https://jjodevelopers.cloud/">
+        ← JJO
+      </a>
+    </header>
+    <div class="articulo-hero">
+      <span class="categoria">
+        Herramientas IA
+      </span>
+      <h1>
+        Cómo usar Claude para programar tu web más rápido
+      </h1>
+      <p class="meta">
+        JJO · 28 febrero 2025 · 6 min de lectura
+      </p>
     </div>
-
-    <h2>5. Automatización de tareas repetitivas de desarrollo</h2>
-
-    <p>Una de las áreas donde Claude marca una diferencia real es en la automatización de tareas que nadie quiere hacer pero que son necesarias: generar documentación, escribir tests unitarios, crear scripts de despliegue o construir estructuras de carpetas y archivos base para proyectos nuevos.</p>
-
-    <p>En lugar de buscar plantillas genéricas en internet, puedes pedirle que genere exactamente lo que necesitas para tu proyecto específico, con tus convenciones de nombres y tu stack tecnológico.</p>
-
-    <h2>¿Reemplaza Claude al programador?</h2>
-
-    <p>La respuesta corta es no. Claude es una herramienta extraordinariamente potente, pero necesita que alguien sepa qué pedirle, evalúe los resultados y tome decisiones de arquitectura. Lo que sí hace es <strong>multiplicar la capacidad de un buen desarrollador</strong>: lo que antes hacía uno solo en una semana, ahora puede hacerlo en dos o tres días con la misma calidad (o mejor).</p>
-
-    <p>En <a href="https://jjodevelopers.cloud/" style="color:#60a5fa;">JJO</a> usamos Claude y otras herramientas de IA como parte de nuestro flujo de trabajo diario. No como un atajo, sino como una capa más de eficiencia que nos permite ofrecer soluciones más rápidas y más cuidadas a nuestros clientes.</p>
-
-    <div class="cta-section">
-      <p>¿Quieres aplicar la IA a tu negocio o necesitas una web profesional? Trabajemos juntos.</p>
-      <a href="https://jjodevelopers.cloud/" class="btn-cta">Visitar JJO</a>
+    <div class="articulo-body">
+      <p>
+        Si todavía programas tu web de forma completamente manual, sin la ayuda de ninguna IA, estás tardando el doble de lo necesario. Herramientas como
+        <strong>
+          Claude
+        </strong>
+        , el modelo de lenguaje de Anthropic, han cambiado radicalmente la forma en que los desarrolladores escriben código, depuran errores y estructuran proyectos web. En este artículo te contamos cómo sacarle el máximo partido.
+      </p>
+      <h2>
+        ¿Qué es Claude y por qué es diferente?
+      </h2>
+      <p>
+        Claude es un asistente de inteligencia artificial creado por Anthropic, diseñado para razonar con profundidad y generar respuestas precisas en contextos técnicos. A diferencia de otros modelos, destaca especialmente en tareas de programación porque no solo escribe código, sino que lo
+        <strong>
+          explica, lo revisa y propone mejoras
+        </strong>
+        de forma coherente.
+      </p>
+      <p>
+        Para el desarrollo web en particular, Claude es capaz de trabajar con HTML, CSS, JavaScript, frameworks como React o Vue, y también con lenguajes de backend como Python o PHP. Puede manejar conversaciones largas con mucho contexto, lo que lo convierte en un compañero ideal para proyectos que evolucionan a lo largo del tiempo.
+      </p>
+      <h2>
+        1. Generación de código a partir de una descripción
+      </h2>
+      <p>
+        Una de las aplicaciones más inmediatas es pedirle a Claude que genere componentes o secciones enteras a partir de una descripción en lenguaje natural. Por ejemplo:
+      </p>
+      <div class="code-block">
+        Prompt: "Crea una sección hero para una web de servicios digitales. Fondo oscuro, título grande, subtítulo y un botón de llamada a la acción. Usa solo HTML y CSS, sin dependencias externas."
+      </div>
+      <p>
+        El resultado es código limpio, semántico y listo para adaptar. Lo que antes podía llevar 20 minutos de trabajo se convierte en cuestión de segundos, dejándote tiempo para centrarte en la lógica del negocio y en la experiencia de usuario.
+      </p>
+      <h2>
+        2. Depuración y explicación de errores
+      </h2>
+      <p>
+        Claude es especialmente útil cuando tienes un error que no entiendes. Puedes pegarle el código roto, describir el comportamiento que ves y pedirle que identifique el problema. Va más allá de señalar el error:
+        <strong>
+          explica por qué ocurre
+        </strong>
+        y propone varias formas de solucionarlo.
+      </p>
+      <p>
+        Esto es especialmente valioso para desarrolladores que están aprendiendo, ya que cada corrección se convierte en una micro-lección. Pero también ahorra tiempo a los profesionales experimentados: a veces un segundo par de ojos —aunque sea artificial— encuentra en segundos lo que tú has pasado por alto durante media hora.
+      </p>
+      <h2>
+        3. Refactorización y mejora de código existente
+      </h2>
+      <p>
+        ¿Tienes código que funciona pero sabes que podría estar mejor organizado? Claude puede revisar tu código y proponer una versión más limpia, más eficiente o más fácil de mantener. Algunos ejemplos concretos de lo que puede hacer:
+      </p>
+      <ul>
+        <li>
+          Convertir CSS repetitivo en variables y clases reutilizables
+        </li>
+        <li>
+          Reestructurar funciones JavaScript demasiado largas
+        </li>
+        <li>
+          Añadir accesibilidad (atributos ARIA, roles semánticos) a HTML existente
+        </li>
+        <li>
+          Optimizar consultas o llamadas a APIs
+        </li>
+        <li>
+          Adaptar componentes para que sean responsive sin romper el diseño
+        </li>
+      </ul>
+      <h2>
+        4. Generación de contenido y textos para la web
+      </h2>
+      <p>
+        Más allá del código, Claude también ayuda a redactar los textos que van dentro de la web:
+        <em>
+          copies
+        </em>
+        para secciones de servicios, descripciones de productos, textos de landing pages, FAQs o incluso artículos de blog como este. Todo manteniendo un tono consistente y adaptado a tu marca.
+      </p>
+      <div class="highlight-box">
+        <p>
+          <strong>
+            Consejo práctico:
+          </strong>
+          Cuanto más contexto le des a Claude sobre tu proyecto (colores, tono de voz, público objetivo, tecnologías que usas), mejores y más ajustados serán los resultados. Trata el prompt como si le estuvieras haciendo un briefing a un colaborador nuevo.
+        </p>
+      </div>
+      <h2>
+        5. Automatización de tareas repetitivas de desarrollo
+      </h2>
+      <p>
+        Una de las áreas donde Claude marca una diferencia real es en la automatización de tareas que nadie quiere hacer pero que son necesarias: generar documentación, escribir tests unitarios, crear scripts de despliegue o construir estructuras de carpetas y archivos base para proyectos nuevos.
+      </p>
+      <p>
+        En lugar de buscar plantillas genéricas en internet, puedes pedirle que genere exactamente lo que necesitas para tu proyecto específico, con tus convenciones de nombres y tu stack tecnológico.
+      </p>
+      <h2>
+        ¿Reemplaza Claude al programador?
+      </h2>
+      <p>
+        La respuesta corta es no. Claude es una herramienta extraordinariamente potente, pero necesita que alguien sepa qué pedirle, evalúe los resultados y tome decisiones de arquitectura. Lo que sí hace es
+        <strong>
+          multiplicar la capacidad de un buen desarrollador
+        </strong>
+        : lo que antes hacía uno solo en una semana, ahora puede hacerlo en dos o tres días con la misma calidad (o mejor).
+      </p>
+      <p>
+        En
+        <a href="https://jjodevelopers.cloud/" style="color:#60a5fa;">
+          JJO
+        </a>
+        usamos Claude y otras herramientas de IA como parte de nuestro flujo de trabajo diario. No como un atajo, sino como una capa más de eficiencia que nos permite ofrecer soluciones más rápidas y más cuidadas a nuestros clientes.
+      </p>
+      <div class="cta-section">
+        <p>
+          ¿Quieres aplicar la IA a tu negocio o necesitas una web profesional? Trabajemos juntos.
+        </p>
+        <a href="https://jjodevelopers.cloud/" class="btn-cta">
+          Visitar JJO
+        </a>
+      </div>
     </div>
-
-  </div>
-
-  <footer>
-    <p>© 2026 JJO — Desarrollamos soluciones digitales</p>
-  </footer>
-
-</body>
+    <footer>
+      <p>
+        © 2026 JJO · Desarrollamos soluciones digitales
+      </p>
+    </footer>
+    <script src="../js/article-translations.js">
+    </script>
+    <script src="../js/article-i18n.js">
+    </script>
+  </body>
 </html>
