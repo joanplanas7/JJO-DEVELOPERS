@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Evita los errores más comunes al implementar IA en empresas: expectativas irreales, malos procesos, falta de control y mala integración.">
+  <title>Errores al implementar IA en empresas: los fallos más comunes | JJO</title>
+  <link rel="icon" type="image/webp" href="../img/favicon.webp">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+      line-height: 1.8;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px 40px;
+      border-bottom: 1px solid #1e1e1e;
+    }
+
+    header a {
+      color: #60a5fa;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.3em;
+    }
+
+    .articulo-hero {
+      background: linear-gradient(135deg, #60a5fa18, #ffffff05);
+      padding: 70px 20px 50px;
+      text-align: center;
+    }
+
+    .articulo-hero .categoria {
+      display: inline-block;
+      background-color: #60a5fa18;
+      color: #60a5fa;
+      font-size: 0.78em;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .articulo-hero h1 {
+      font-size: 2.1em;
+      font-weight: 700;
+      max-width: 860px;
+      margin: 0 auto 16px;
+      line-height: 1.3;
+    }
+
+    .articulo-hero .meta {
+      color: #666;
+      font-size: 0.83em;
+    }
+
+    .articulo-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    .articulo-body h2 {
+      font-size: 1.3em;
+      font-weight: 700;
+      color: #60a5fa;
+      margin: 48px 0 16px;
+    }
+
+    .articulo-body p {
+      color: #bbb;
+      font-size: 0.95em;
+      margin-bottom: 20px;
+    }
+
+    .intro-lead {
+      font-size: 1.05em !important;
+      color: #ddd !important;
+      border-left: 3px solid #60a5fa40;
+      padding-left: 18px;
+      margin-bottom: 40px !important;
+    }
+
+    .articulo-body ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 24px;
+    }
+
+    .articulo-body ul li {
+      color: #bbb;
+      font-size: 0.93em;
+      padding: 9px 0 9px 28px;
+      position: relative;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    .articulo-body ul li::before {
+      content: '→';
+      color: #60a5fa;
+      position: absolute;
+      left: 0;
+    }
+
+    .ejemplo-box {
+      background-color: #111;
+      border-radius: 12px;
+      padding: 24px 26px;
+      margin: 28px 0;
+      border-top: 3px solid #60a5fa;
+    }
+
+    .ejemplo-box .label {
+      font-size: 0.78em;
+      font-weight: 700;
+      color: #60a5fa;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #60a5fa18, #60a5fa08);
+      border: 1px solid #60a5fa24;
+      border-radius: 14px;
+      padding: 24px;
+      margin: 34px 0;
+    }
+
+    .cta-section {
+      margin-top: 42px;
+      padding: 28px;
+      background-color: #111;
+      border: 1px solid #1d1d1d;
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .cta-section p {
+      margin-bottom: 16px;
+      color: #e5e5e5;
+    }
+
+    .btn-cta {
+      display: inline-block;
+      background-color: #60a5fa;
+      color: #0d0d0d;
+      padding: 12px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .btn-cta:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+
+    footer {
+      border-top: 1px solid #1a1a1a;
+      text-align: center;
+      padding: 24px;
+      color: #666;
+      font-size: 0.82em;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 18px 20px;
+      }
+
+      .articulo-hero h1 {
+        font-size: 1.7em;
+      }
+
+      .articulo-body {
+        padding: 42px 20px 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="https://jjodevelopers.cloud/">← JJO</a>
+  </header>
+
+  <section class="articulo-hero">
+    <div class="categoria">Estrategia de IA</div>
+    <h1>Errores al implementar IA en empresas: los fallos más comunes</h1>
+    <div class="meta">Publicado el 2 de marzo de 2026 · Lectura de 6 min</div>
+  </section>
+
+  <div class="articulo-body">
+    <p class="intro-lead">Cada vez más empresas quieren incorporar inteligencia artificial, pero muchas implantaciones fallan no por la tecnología, sino por la forma de abordarla. El problema rara vez es que la IA “no sirva”; suele ser que se aplica sin foco, sin proceso y sin una expectativa realista.</p>
+
+    <p>Entender los errores más comunes permite evitar tiempo perdido, frustración interna y proyectos que parecen prometedores al principio pero no llegan a integrarse de verdad en la operativa del negocio.</p>
+
+    <h2>Querer automatizar un caos</h2>
+
+    <p>Si el proceso ya es confuso, cambia constantemente o depende de excepciones mal definidas, automatizarlo solo acelera el desorden. Antes de aplicar IA conviene ordenar mínimamente el flujo y aclarar cómo debería funcionar.</p>
+
+    <h2>Empezar por un proyecto demasiado grande</h2>
+
+    <p>Muchas empresas intentan resolver demasiadas áreas a la vez. Eso complica la implantación, retrasa resultados y hace más difícil medir el retorno. Suele funcionar mejor empezar por un caso acotado y ampliarlo después.</p>
+
+    <h2>Esperar magia en lugar de una mejora concreta</h2>
+
+    <p>La IA no convierte cualquier proceso mediocre en excelente por arte de magia. Lo que sí hace bien es acelerar, clasificar, resumir, interpretar y activar acciones sobre tareas específicas. Cuanto más concreto sea el objetivo, mejor suele ir el proyecto.</p>
+
+    <h2>No definir controles ni supervisión</h2>
+
+    <p>Automatizar no significa quitar toda revisión humana. En procesos sensibles conviene establecer validaciones, umbrales, registros y puntos de control. Eso evita errores silenciosos y hace la solución mucho más fiable a largo plazo.</p>
+
+    <h2>Ignorar la integración con herramientas reales</h2>
+
+    <p>Una demo aislada puede parecer impresionante y aun así no servir para el negocio. El valor aparece cuando la IA está conectada con el CRM, el ERP, el email, la base documental o los canales de atención que la empresa ya usa.</p>
+
+    <h2>No medir tiempo, coste y resultado</h2>
+
+    <p>Si no se mide cuánto tiempo consumía el proceso antes, cuántos errores generaba o cuántas oportunidades se perdían, luego es difícil saber si la implantación compensa. La IA necesita contexto de negocio, no solo contexto técnico.</p>
+
+    <h2>Olvidar a las personas que usarán el sistema</h2>
+
+    <p>Una solución técnicamente correcta puede fracasar si el equipo no la entiende o si añade fricción al trabajo diario. La adopción mejora cuando el sistema es claro, útil y se adapta a cómo opera la empresa de verdad.</p>
+
+    <h2>Qué enfoque suele funcionar mejor</h2>
+
+    <ul>
+      <li>Elegir un proceso concreto y frecuente</li>
+      <li>Definir claramente qué parte se quiere mejorar</li>
+      <li>Conectar la IA con las herramientas que ya usa el equipo</li>
+      <li>Medir el resultado desde el principio</li>
+      <li>Escalar solo cuando el primer caso ya funciona bien</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p><strong>La diferencia entre una IA que impresiona y una IA que aporta valor está en la implantación.</strong> Cuando el proyecto se diseña alrededor del proceso real de la empresa, la tecnología deja de ser una promesa y empieza a ser una ventaja operativa.</p>
+    </div>
+
+    <p>En <a href="https://jjodevelopers.cloud/" style="color:#60a5fa;">JJO</a> enfocamos este tipo de proyectos con una lógica muy práctica: detectar dónde está la fricción, diseñar una automatización viable y desplegarla de forma que encaje con el negocio desde el primer día.</p>
+
+    <div class="cta-section">
+      <p>Si estás valorando implantar IA en tu empresa y quieres evitar errores típicos, podemos ayudarte a enfocarlo bien.</p>
+      <a href="https://jjodevelopers.cloud/" class="btn-cta">Visitar JJO</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 JJO · Desarrollamos soluciones digitales</p>
+  </footer>
+
+</body>
+</html>
