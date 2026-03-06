@@ -215,6 +215,7 @@
     <p id="footer-text">© 2026 JJO · Desarrollamos soluciones digitales</p>
   </footer>
 
+  <script src="../js/article-translations.js"></script>
   <script>
     const archiveTranslations = {
       es: {
@@ -269,6 +270,22 @@
       document.querySelector('meta[property="og:description"]').setAttribute('content', data.ogDescription);
       document.querySelector('meta[name="twitter:title"]').setAttribute('content', data.ogTitle);
       document.querySelector('meta[name="twitter:description"]').setAttribute('content', data.ogDescription);
+
+      document.querySelectorAll('.article-list a').forEach((link) => {
+        if (!link.dataset.esTitle) {
+          link.dataset.esTitle = link.textContent.trim();
+        }
+
+        if (lang === 'es') {
+          link.textContent = link.dataset.esTitle;
+          return;
+        }
+
+        const href = link.getAttribute('href') || '';
+        const slug = href.split('/').pop().replace('.html', '');
+        const translated = window.articleTranslations?.[slug]?.[lang]?.title;
+        link.textContent = translated || link.dataset.esTitle;
+      });
     }
 
     document.querySelectorAll('.lang-btn').forEach((btn) => {
