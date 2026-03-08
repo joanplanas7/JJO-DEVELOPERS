@@ -720,6 +720,34 @@ footer {
   color: #888;
 }
 
+.footer-social {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+a.btn-footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #0d0d0d;
+  background-color: #60a5fa;
+  transition: all 0.25s ease;
+  font-size: 1.1rem;
+}
+
+a.btn-footer-social:hover {
+  background-color: #3b82f6;
+  transform: translateY(-1px);
+}
+
 /* ANIMACION HERO */
 @keyframes fadeInDown {
   from {

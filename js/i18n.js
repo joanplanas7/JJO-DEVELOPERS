@@ -8,7 +8,7 @@ const translations = {
 
     'nav.sobre': 'Quiénes somos',
     'nav.servicios': 'Servicios',
-    'nav.articulos': 'Artículos',
+    'nav.articulos': 'Blog',
     'nav.proceso': 'Cómo trabajamos',
     'nav.contacto': 'Contacto',
 
@@ -106,7 +106,7 @@ const translations = {
 
     'nav.sobre': 'About us',
     'nav.servicios': 'Services',
-    'nav.articulos': 'Articles',
+    'nav.articulos': 'Blog',
     'nav.proceso': 'How we work',
     'nav.contacto': 'Contact',
 
@@ -204,7 +204,7 @@ const translations = {
 
     'nav.sobre': 'Qui som',
     'nav.servicios': 'Serveis',
-    'nav.articulos': 'Articles',
+    'nav.articulos': 'Blog',
     'nav.proceso': 'Com treballem',
     'nav.contacto': 'Contacte',
 
