@@ -1,23 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2S0G1BNN0"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-N2S0G1BNN0');
-  </script>
-
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WSP2ZN4N');</script>
-  <!-- End Google Tag Manager -->
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="JJO desarrolla automatizaciones con IA, ERPs a medida y páginas web profesionales para empresas que quieren ahorrar tiempo, captar más clientes y digitalizar procesos." data-i18n-meta="description">
@@ -51,11 +34,7 @@
     }
   </script>
 </head>
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSP2ZN4N" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
+<body data-enable-analytics="true">
   <header>
     <div class="brand">
       <img src="img/logojjo.png" alt="Logo de JJO" class="brand-logo">
@@ -241,6 +220,14 @@
       <input type="email" name="email" data-i18n-placeholder="form.email" placeholder="Tu email" required>
       <input type="text" name="empresa" data-i18n-placeholder="form.company" placeholder="Tu empresa (opcional)">
       <textarea name="message" data-i18n-placeholder="form.message" placeholder="¿En qué podemos ayudarte?" rows="5" required></textarea>
+      <p class="privacy-note">
+        <span data-i18n="form.privacyNote">Usaremos tus datos solo para responder a tu consulta o preparar una propuesta relacionada con lo que nos pidas.</span>
+        <a href="/politica-privacidad.html" target="_blank" rel="noopener noreferrer" data-i18n="form.privacyLink">Consulta la política de privacidad</a>.
+      </p>
+      <label class="privacy-check">
+        <input type="checkbox" name="privacy_acceptance" required>
+        <span data-i18n="form.privacyAcceptance">He leído la política de privacidad y acepto el tratamiento de mis datos para responder a mi solicitud.</span>
+      </label>
 
       <button type="submit" data-i18n="form.submit">Enviar mensaje</button>
       <div id="form-result" class="form-result"></div>
@@ -285,6 +272,12 @@
         <i class="bi bi-instagram"></i>
       </a>
     </div>
+    <div class="footer-links">
+      <a href="/aviso-legal.html" data-i18n="footer.legal">Aviso legal</a>
+      <a href="/politica-privacidad.html" data-i18n="footer.privacy">Política de privacidad</a>
+      <a href="/politica-cookies.html" data-i18n="footer.cookies">Política de cookies</a>
+      <button type="button" data-open-cookie-settings data-i18n="footer.manageCookies">Cambiar cookies</button>
+    </div>
     <p>&copy; <span id="anio"></span> JJO - <span data-i18n="footer.desc">Desarrollamos soluciones digitales</span></p>
   </footer>
 
@@ -292,6 +285,7 @@
     <i class="bi bi-whatsapp"></i>
   </a>
 
+  <script src="js/cookie-consent.js"></script>
   <script src="js/script.js"></script>
   <script src="js/i18n.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

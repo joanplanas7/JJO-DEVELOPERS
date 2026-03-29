@@ -93,8 +93,15 @@ const translations = {
     'form.company': 'Tu empresa (opcional)',
     'form.message': '¿En qué podemos ayudarte?',
     'form.submit': 'Enviar mensaje',
+    'form.privacyNote': 'Usaremos tus datos solo para responder a tu consulta o preparar una propuesta relacionada con lo que nos pidas.',
+    'form.privacyLink': 'Consulta la política de privacidad',
+    'form.privacyAcceptance': 'He leído la política de privacidad y acepto el tratamiento de mis datos para responder a mi solicitud.',
 
-    'footer.desc': 'Desarrollamos soluciones digitales'
+    'footer.desc': 'Desarrollamos soluciones digitales',
+    'footer.legal': 'Aviso legal',
+    'footer.privacy': 'Política de privacidad',
+    'footer.cookies': 'Política de cookies',
+    'footer.manageCookies': 'Cambiar cookies'
   },
 
   en: {
@@ -191,8 +198,15 @@ const translations = {
     'form.company': 'Your company (optional)',
     'form.message': 'How can we help you?',
     'form.submit': 'Send message',
+    'form.privacyNote': 'We will only use your data to reply to your inquiry or prepare a proposal related to what you ask for.',
+    'form.privacyLink': 'Read the privacy policy',
+    'form.privacyAcceptance': 'I have read the privacy policy and accept the processing of my data to answer my request.',
 
-    'footer.desc': 'We develop digital solutions'
+    'footer.desc': 'We develop digital solutions',
+    'footer.legal': 'Legal notice',
+    'footer.privacy': 'Privacy policy',
+    'footer.cookies': 'Cookie policy',
+    'footer.manageCookies': 'Change cookies'
   },
 
   ca: {
@@ -289,8 +303,15 @@ const translations = {
     'form.company': 'La teva empresa (opcional)',
     'form.message': 'En què et podem ajudar?',
     'form.submit': 'Enviar missatge',
+    'form.privacyNote': 'Farem servir les teves dades només per respondre la teva consulta o preparar una proposta relacionada amb allò que ens demanis.',
+    'form.privacyLink': 'Consulta la política de privacitat',
+    'form.privacyAcceptance': 'He llegit la política de privacitat i accepto el tractament de les meves dades per respondre la meva sol·licitud.',
 
-    'footer.desc': 'Desenvolupem solucions digitals'
+    'footer.desc': 'Desenvolupem solucions digitals',
+    'footer.legal': 'Avís legal',
+    'footer.privacy': 'Política de privacitat',
+    'footer.cookies': 'Política de cookies',
+    'footer.manageCookies': 'Canviar cookies'
   }
 };
 
@@ -326,6 +347,7 @@ function setLanguage(lang) {
 
   localStorage.setItem('jjo-lang', lang);
   document.documentElement.lang = lang;
+  window.dispatchEvent(new CustomEvent('jjo:language-changed', { detail: { lang } }));
 
   document.querySelectorAll('.lang-btn').forEach((btn) => {
     btn.classList.toggle('active', btn.dataset.lang === lang);

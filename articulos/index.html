@@ -152,6 +152,30 @@
       font-size: 0.85rem;
       padding: 20px;
     }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 18px;
+      margin-bottom: 12px;
+    }
+
+    .footer-links a,
+    .footer-links button {
+      border: none;
+      background: none;
+      padding: 0;
+      color: #9ca3af;
+      font: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .footer-links a:hover,
+    .footer-links button:hover {
+      color: var(--brand);
+    }
   </style>
 </head>
 <body>
@@ -212,9 +236,16 @@
   </main>
 
   <footer>
+    <div class="footer-links">
+      <a href="/aviso-legal.html" data-footer-link="legal">Aviso legal</a>
+      <a href="/politica-privacidad.html" data-footer-link="privacy">Política de privacidad</a>
+      <a href="/politica-cookies.html" data-footer-link="cookies">Política de cookies</a>
+      <button type="button" data-open-cookie-settings data-footer-link="manage">Cambiar cookies</button>
+    </div>
     <p id="footer-text">© 2026 JJO · Desarrollamos soluciones digitales</p>
   </footer>
 
+  <script src="../js/cookie-consent.js"></script>
   <script src="../js/article-translations.js"></script>
   <script>
     const archiveTranslations = {
@@ -222,6 +253,10 @@
         title: 'Archivo de articulos',
         lead: 'Todos los contenidos publicados por JJO Developers.',
         home: 'Volver a JJO',
+        footerLegal: 'Aviso legal',
+        footerPrivacy: 'Política de privacidad',
+        footerCookies: 'Política de cookies',
+        footerManage: 'Cambiar cookies',
         metaTitle: 'Archivo de articulos | JJO Developers',
         metaDescription: 'Listado completo de articulos de JJO Developers sobre IA, automatizacion, ERP y paginas web para empresas.',
         ogTitle: 'Archivo de articulos | JJO Developers',
@@ -232,6 +267,10 @@
         title: 'Articles archive',
         lead: 'All published content from JJO Developers.',
         home: 'Back to JJO',
+        footerLegal: 'Legal notice',
+        footerPrivacy: 'Privacy policy',
+        footerCookies: 'Cookie policy',
+        footerManage: 'Change cookies',
         metaTitle: 'Articles archive | JJO Developers',
         metaDescription: 'Complete list of JJO Developers articles about AI, automation, ERP and business websites.',
         ogTitle: 'Articles archive | JJO Developers',
@@ -242,6 +281,10 @@
         title: 'Arxiu d articles',
         lead: 'Tots els continguts publicats per JJO Developers.',
         home: 'Tornar a JJO',
+        footerLegal: 'Avís legal',
+        footerPrivacy: 'Política de privacitat',
+        footerCookies: 'Política de cookies',
+        footerManage: 'Canviar cookies',
         metaTitle: 'Arxiu d articles | JJO Developers',
         metaDescription: 'Llistat complet d articles de JJO Developers sobre IA, automatitzacio, ERP i webs per empreses.',
         ogTitle: 'Arxiu d articles | JJO Developers',
@@ -262,6 +305,10 @@
       document.querySelector('[data-i18n="title"]').textContent = data.title;
       document.querySelector('[data-i18n="lead"]').textContent = data.lead;
       document.querySelector('[data-i18n="home"]').textContent = data.home;
+      document.querySelector('[data-footer-link="legal"]').textContent = data.footerLegal;
+      document.querySelector('[data-footer-link="privacy"]').textContent = data.footerPrivacy;
+      document.querySelector('[data-footer-link="cookies"]').textContent = data.footerCookies;
+      document.querySelector('[data-footer-link="manage"]').textContent = data.footerManage;
       document.getElementById('footer-text').textContent = data.footer;
 
       document.title = data.metaTitle;
@@ -286,6 +333,8 @@
         const translated = window.articleTranslations?.[slug]?.[lang]?.title;
         link.textContent = translated || link.dataset.esTitle;
       });
+
+      window.dispatchEvent(new CustomEvent('jjo:language-changed', { detail: { lang } }));
     }
 
     document.querySelectorAll('.lang-btn').forEach((btn) => {
