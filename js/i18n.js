@@ -1,8 +1,8 @@
 const translations = {
   es: {
-    'meta.title': 'Automatizaciones con IA, ERPs a medida y páginas web para empresas | JJO',
+    'meta.title': 'IA, ERPs a medida y páginas web para empresas | JJO',
     'meta.description': 'JJO desarrolla automatizaciones con IA, ERPs a medida y páginas web profesionales para empresas que quieren ahorrar tiempo, captar más clientes y digitalizar procesos.',
-    'meta.ogTitle': 'Automatizaciones con IA, ERPs a medida y páginas web para empresas | JJO',
+    'meta.ogTitle': 'IA, ERPs a medida y páginas web para empresas | JJO',
     'meta.ogDescription': 'Creamos software a medida, automatizaciones con IA y webs profesionales para empresas que quieren digitalizarse con soluciones prácticas.',
     'meta.schemaDescription': 'Desarrollo de automatizaciones con IA, ERPs a medida y páginas web para empresas.',
 
@@ -166,9 +166,9 @@ const translations = {
   },
 
   en: {
-    'meta.title': 'AI automations, custom ERPs and websites for businesses | JJO',
+    'meta.title': 'AI, custom ERPs and websites for businesses | JJO',
     'meta.description': 'JJO develops AI automations, custom ERPs and professional websites for businesses that want to save time, attract more clients and digitize processes.',
-    'meta.ogTitle': 'AI automations, custom ERPs and websites for businesses | JJO',
+    'meta.ogTitle': 'AI, custom ERPs and websites for businesses | JJO',
     'meta.ogDescription': 'We build custom software, AI automations and professional websites for businesses that want practical digital solutions.',
     'meta.schemaDescription': 'Development of AI automations, custom ERPs and websites for businesses.',
 
@@ -332,9 +332,9 @@ const translations = {
   },
 
   ca: {
-    'meta.title': 'Automatitzacions amb IA, ERPs a mida i pàgines web per a empreses | JJO',
+    'meta.title': 'IA, ERPs a mida i pàgines web per a empreses | JJO',
     'meta.description': 'JJO desenvolupa automatitzacions amb IA, ERPs a mida i pàgines web professionals per a empreses que volen estalviar temps, captar més clients i digitalitzar processos.',
-    'meta.ogTitle': 'Automatitzacions amb IA, ERPs a mida i pàgines web per a empreses | JJO',
+    'meta.ogTitle': 'IA, ERPs a mida i pàgines web per a empreses | JJO',
     'meta.ogDescription': 'Creem programes a mida, automatitzacions amb IA i webs professionals per a empreses que volen solucions digitals pràctiques.',
     'meta.schemaDescription': 'Desenvolupament d\'automatitzacions amb IA, ERPs a mida i pàgines web per a empreses.',
 
@@ -504,6 +504,8 @@ function applyMetaTranslations(lang) {
   const descriptionEl = document.querySelector('[data-i18n-meta="description"]');
   const ogTitleEl = document.querySelector('[data-i18n-meta="og:title"]');
   const ogDescriptionEl = document.querySelector('[data-i18n-meta="og:description"]');
+  const twitterTitleEl = document.querySelector('[data-i18n-meta="twitter:title"]');
+  const twitterDescriptionEl = document.querySelector('[data-i18n-meta="twitter:description"]');
   const schemaDescriptionEl = document.querySelector('[data-i18n-meta="schema:description"]');
 
   if (titleEl && map['meta.title']) {
@@ -517,6 +519,12 @@ function applyMetaTranslations(lang) {
   }
   if (ogDescriptionEl && map['meta.ogDescription']) {
     ogDescriptionEl.setAttribute('content', map['meta.ogDescription']);
+  }
+  if (twitterTitleEl && map['meta.ogTitle']) {
+    twitterTitleEl.setAttribute('content', map['meta.ogTitle']);
+  }
+  if (twitterDescriptionEl && map['meta.ogDescription']) {
+    twitterDescriptionEl.setAttribute('content', map['meta.ogDescription']);
   }
   if (schemaDescriptionEl && map['meta.schemaDescription']) {
     const schema = JSON.parse(schemaDescriptionEl.textContent);

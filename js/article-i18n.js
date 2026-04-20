@@ -226,6 +226,123 @@ function normalizeCorruptedText(text) {
   return output;
 }
 
+function stripHtml(html) {
+  const element = document.createElement('div');
+  element.innerHTML = html || '';
+  return normalizeCorruptedText(element.textContent || '').replace(/\s+/g, ' ').trim();
+}
+
+function getCanonicalUrl() {
+  return document.querySelector('link[rel="canonical"]')?.href || window.location.href.split('#')[0];
+}
+
+function getOgImage() {
+  return document.querySelector('meta[property="og:image"]')?.getAttribute('content') || 'https://jjodevelopers.com/img/logojjo.png';
+}
+
+function parseSpanishArticleDate(meta) {
+  const months = {
+    enero: '01',
+    febrero: '02',
+    marzo: '03',
+    abril: '04',
+    mayo: '05',
+    junio: '06',
+    julio: '07',
+    agosto: '08',
+    septiembre: '09',
+    setiembre: '09',
+    octubre: '10',
+    noviembre: '11',
+    diciembre: '12'
+  };
+  const normalized = stripHtml(meta).toLowerCase();
+  const match = normalized.match(/(\d{1,2})\s+(?:de\s+)?([a-záéíóúñ]+)\s+(?:de\s+)?(\d{4})/i);
+  if (!match) return '2026-03-01';
+
+  const day = match[1].padStart(2, '0');
+  const month = months[match[2].normalize('NFD').replace(/[\u0300-\u036f]/g, '')] || '03';
+  return `${match[3]}-${month}-${day}`;
+}
+
+function upsertJsonLd(id, data) {
+  let script = document.getElementById(id);
+  if (!script) {
+    script = document.createElement('script');
+    script.id = id;
+    script.type = 'application/ld+json';
+    document.head.appendChild(script);
+  }
+  script.textContent = JSON.stringify(data, null, 2);
+}
+
+function updateArticleStructuredData(lang, translation, spanishSnapshot) {
+  const canonical = getCanonicalUrl();
+  const title = stripHtml(translation.title);
+  const category = stripHtml(translation.category);
+  const description = stripHtml(translation.metaDescription);
+  const published = spanishSnapshot.datePublished || parseSpanishArticleDate(spanishSnapshot.meta);
+
+  upsertJsonLd('article-structured-data', {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BlogPosting',
+        '@id': `${canonical}#article`,
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': canonical
+        },
+        headline: title,
+        description,
+        image: [getOgImage()],
+        datePublished: published,
+        dateModified: '2026-04-20',
+        author: {
+          '@type': 'Organization',
+          name: 'JJO Developers',
+          url: 'https://jjodevelopers.com/'
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'JJO Developers',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://jjodevelopers.com/img/logojjo.png'
+          }
+        },
+        articleSection: category,
+        inLanguage: lang,
+        url: canonical
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${canonical}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: lang === 'en' ? 'Home' : lang === 'ca' ? 'Inici' : 'Inicio',
+            item: 'https://jjodevelopers.com/'
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: lang === 'en' ? 'Articles' : lang === 'ca' ? 'Articles' : 'Artículos',
+            item: 'https://jjodevelopers.com/articulos/'
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: title,
+            item: canonical
+          }
+        ]
+      }
+    ]
+  });
+}
+
 function setActiveArticleLang(lang) {
   document.querySelectorAll('.article-lang-btn').forEach((btn) => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
@@ -338,6 +455,7 @@ function setArticleLanguage(lang, spanishSnapshot, articleTranslations) {
 
   setArticleFooterLinks(lang);
   setActiveArticleLang(lang);
+  updateArticleStructuredData(lang, translation, spanishSnapshot);
   window.dispatchEvent(new CustomEvent('jjo:language-changed', { detail: { lang } }));
 }
 
@@ -361,6 +479,7 @@ document.addEventListener('DOMContentLoaded', () => {
     meta: normalizeCorruptedText(document.querySelector('.articulo-hero .meta')?.innerHTML || ''),
     body: normalizeCorruptedText(document.querySelector('.articulo-body')?.innerHTML || '')
   };
+  spanishSnapshot.datePublished = parseSpanishArticleDate(spanishSnapshot.meta);
 
   ensureArticleLangSwitcher((lang) => setArticleLanguage(lang, spanishSnapshot, articleTranslations));
 
