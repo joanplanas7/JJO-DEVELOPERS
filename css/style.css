@@ -813,8 +813,11 @@ footer {
 
 .footer-inner {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 8px;
+  text-align: center;
 }
 
 .footer-logo {
@@ -826,6 +829,31 @@ footer {
 footer p {
   font-size: 0.82rem;
   color: var(--muted);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 20px;
+  margin-top: 18px;
+}
+
+.footer-links a,
+.footer-links button {
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.82rem;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.footer-links a:hover,
+.footer-links button:hover {
+  color: var(--accent);
 }
 
 /* ─── WHATSAPP FLOAT ─────────────────────────────────────────── */

@@ -13,15 +13,26 @@ const translations = {
     'nav.contacto': 'Contacto',
 
     'hero.title': 'Soluciones digitales para tu negocio',
+    'hero.pretitle': '— Desarrollo & Automatización',
     'hero.desc':  'Ayudamos a tu empresa a digitalizarse con soluciones prácticas y personalizadas.',
     'hero.btn':   'Contáctanos',
     'hero.more':  'Ver servicios',
+    'hero.badge.ia': 'IA',
     'status.available': 'Disponibles',
     'ticker.label': 'Construimos',
     'ticker.w1': 'ERPs a medida',
     'ticker.w2': 'automatizaciones',
     'ticker.w3': 'páginas web',
     'ticker.w4': 'flujos con IA',
+
+    'marquee.erp': 'ERPs a medida',
+    'marquee.automation': 'Automatización con IA',
+    'marquee.web': 'Páginas web',
+    'marquee.chatbots': 'Chatbots inteligentes',
+    'marquee.crm': 'CRM a medida',
+    'marquee.processes': 'Procesos digitales',
+    'marquee.invoicing': 'Facturación automática',
+    'marquee.agents': 'Agentes virtuales',
 
     'sobre.title': 'Quiénes somos',
     'sobre.p1': 'En <strong>JJO</strong> creamos software a medida para empresas que quieren recuperar su tiempo. Automatizamos los procesos que consumen horas cada semana (gestión de datos, comunicaciones, flujos de trabajo) para que puedas centrarte en lo que de verdad importa: hacer crecer tu negocio.',
@@ -91,7 +102,7 @@ const translations = {
 
     'contacto.title': 'DATOS DE CONTACTO',
     'contacto.desc': '¿Quieres colaborar o necesitas una aplicación para tu empresa? Escríbenos:',
-    'contacto.divider': 'o contáctanos directamente:',
+    'contacto.divider': 'También nos puedes encontrar en:',
 
     'form.name': 'Tu nombre',
     'form.email': 'Tu email',
@@ -103,6 +114,10 @@ const translations = {
     'form.privacyAcceptance': 'He leído la política de privacidad y acepto el tratamiento de mis datos para responder a mi solicitud.',
 
     'footer.desc': 'Desarrollamos soluciones digitales',
+    'footer.legal': 'Aviso legal',
+    'footer.privacy': 'Política de privacidad',
+    'footer.cookies': 'Política de cookies',
+    'footer.manageCookies': 'Cambiar cookies',
 
     'nav.blog':    'Blog',
     'blog.title':   'Blog',
@@ -164,15 +179,26 @@ const translations = {
     'nav.contacto': 'Contact',
 
     'hero.title': 'Digital solutions for your business',
+    'hero.pretitle': '— Development & Automation',
     'hero.desc':  'We help your business go digital with practical, personalized solutions.',
     'hero.btn':   'Contact us',
     'hero.more':  'See services',
+    'hero.badge.ia': 'AI',
     'status.available': 'Available',
     'ticker.label': 'We build',
     'ticker.w1': 'custom ERPs',
     'ticker.w2': 'automations',
     'ticker.w3': 'websites',
     'ticker.w4': 'AI workflows',
+
+    'marquee.erp': 'custom ERPs',
+    'marquee.automation': 'AI automation',
+    'marquee.web': 'websites',
+    'marquee.chatbots': 'intelligent chatbots',
+    'marquee.crm': 'custom CRM',
+    'marquee.processes': 'digital processes',
+    'marquee.invoicing': 'automatic invoicing',
+    'marquee.agents': 'virtual agents',
 
     'sobre.title': 'About us',
     'sobre.p1': 'At <strong>JJO</strong> we build custom software for businesses that want to get their time back. We automate the processes that consume hours every week (data management, communications, workflows) so you can focus on what truly matters: growing your business.',
@@ -242,7 +268,7 @@ const translations = {
 
     'contacto.title': 'CONTACT INFO',
     'contacto.desc': 'Want to collaborate or need an app for your business? Write to us:',
-    'contacto.divider': 'or contact us directly:',
+    'contacto.divider': 'You can also find us on:',
 
     'form.name': 'Your name',
     'form.email': 'Your email',
@@ -254,6 +280,10 @@ const translations = {
     'form.privacyAcceptance': 'I have read the privacy policy and accept the processing of my data to answer my request.',
 
     'footer.desc': 'We develop digital solutions',
+    'footer.legal': 'Legal notice',
+    'footer.privacy': 'Privacy policy',
+    'footer.cookies': 'Cookie policy',
+    'footer.manageCookies': 'Change cookies',
 
     'nav.blog':    'Blog',
     'blog.title':   'Blog',
@@ -315,15 +345,26 @@ const translations = {
     'nav.contacto': 'Contacte',
 
     'hero.title': 'Solucions digitals per al teu negoci',
+    'hero.pretitle': '— Desenvolupament i Automatització',
     'hero.desc':  'Ajudem la teva empresa a digitalitzar-se amb solucions pràctiques i personalitzades.',
     'hero.btn':   "Contacta'ns",
     'hero.more':  'Veure serveis',
+    'hero.badge.ia': 'IA',
     'status.available': 'Disponibles',
     'ticker.label': 'Construïm',
     'ticker.w1': 'ERPs a mida',
     'ticker.w2': 'automatitzacions',
     'ticker.w3': 'pàgines web',
     'ticker.w4': 'fluxos amb IA',
+
+    'marquee.erp': 'ERPs a mida',
+    'marquee.automation': 'Automatització amb IA',
+    'marquee.web': 'Pàgines web',
+    'marquee.chatbots': 'Chatbots intel·ligents',
+    'marquee.crm': 'CRM a mida',
+    'marquee.processes': 'Processos digitals',
+    'marquee.invoicing': 'Facturació automàtica',
+    'marquee.agents': 'Agents virtuals',
 
     'sobre.title': 'Qui som',
     'sobre.p1': 'A <strong>JJO</strong> creem programes a mida per a empreses que volen recuperar el seu temps. Automatitzem els processos que consumeixen hores cada setmana (gestió de dades, comunicacions, fluxos de treball) perquè et puguis centrar en el que de veritat importa: fer créixer el teu negoci.',
@@ -393,7 +434,7 @@ const translations = {
 
     'contacto.title': 'DADES DE CONTACTE',
     'contacto.desc': 'Vols col·laborar o necessites una aplicació per a la teva empresa? Escriu-nos:',
-    'contacto.divider': 'o contacta\'ns directament:',
+    'contacto.divider': 'També ens pots trobar a:',
 
     'form.name': 'El teu nom',
     'form.email': 'El teu email',
@@ -405,6 +446,10 @@ const translations = {
     'form.privacyAcceptance': 'He llegit la política de privacitat i accepto el tractament de les meves dades per respondre la meva sol·licitud.',
 
     'footer.desc': 'Desenvolupem solucions digitals',
+    'footer.legal': 'Avís legal',
+    'footer.privacy': 'Política de privacitat',
+    'footer.cookies': 'Política de cookies',
+    'footer.manageCookies': 'Canviar cookies',
 
     'nav.blog':    'Blog',
     'blog.title':   'Blog',
@@ -485,7 +530,6 @@ function setLanguage(lang) {
 
   localStorage.setItem('jjo-lang', lang);
   document.documentElement.lang = lang;
-  window.dispatchEvent(new CustomEvent('jjo:language-changed', { detail: { lang } }));
 
   document.querySelectorAll('.lang-btn').forEach((btn) => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
@@ -506,6 +550,7 @@ function setLanguage(lang) {
   });
 
   applyMetaTranslations(lang);
+  window.dispatchEvent(new CustomEvent('jjo:language-changed', { detail: { lang } }));
 }
 
 document.addEventListener('DOMContentLoaded', () => {

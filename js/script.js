@@ -77,14 +77,17 @@ class TextScramble {
   }
 }
 
-window.addEventListener('load', () => {
+function animateHeroPretitle() {
   const pretitle = document.querySelector('.hero-pretitle');
-  if (pretitle) {
-    const text = pretitle.textContent.trim();
-    pretitle.textContent = '';
-    setTimeout(() => new TextScramble(pretitle).setText(text), 500);
-  }
-});
+  if (!pretitle) return;
+
+  const text = pretitle.textContent.trim();
+  pretitle.textContent = '';
+  setTimeout(() => new TextScramble(pretitle).setText(text), 500);
+}
+
+window.addEventListener('load', animateHeroPretitle);
+window.addEventListener('jjo:language-changed', animateHeroPretitle);
 
 // ─── PARTICLE SYSTEM (hero canvas) ───────────────────────────
 (function initParticles() {

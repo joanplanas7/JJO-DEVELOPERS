@@ -2,10 +2,10 @@ const legalPageTranslations = {
   es: {
     home: 'Volver a JJO',
     updated: 'Última revisión: 29 de marzo de 2026',
-    footerCopy: '© 2026 JJO · Desarrollamos soluciones digitales',
+    footerDesc: 'Desarrollamos soluciones digitales',
     footerLegal: 'Aviso legal',
-    footerPrivacy: 'Privacidad',
-    footerCookies: 'Cookies',
+    footerPrivacy: 'Política de privacidad',
+    footerCookies: 'Política de cookies',
     footerManage: 'Cambiar cookies',
     warning: '',
     pages: {
@@ -145,10 +145,10 @@ const legalPageTranslations = {
   en: {
     home: 'Back to JJO',
     updated: 'Last reviewed: March 29, 2026',
-    footerCopy: '© 2026 JJO · We develop digital solutions',
+    footerDesc: 'We develop digital solutions',
     footerLegal: 'Legal notice',
-    footerPrivacy: 'Privacy',
-    footerCookies: 'Cookies',
+    footerPrivacy: 'Privacy policy',
+    footerCookies: 'Cookie policy',
     footerManage: 'Change cookies',
     warning: '',
     pages: {
@@ -262,10 +262,10 @@ const legalPageTranslations = {
   ca: {
     home: 'Tornar a JJO',
     updated: 'Darrera revisió: 29 de març de 2026',
-    footerCopy: '© 2026 JJO · Desenvolupem solucions digitals',
+    footerDesc: 'Desenvolupem solucions digitals',
     footerLegal: 'Avís legal',
-    footerPrivacy: 'Privacitat',
-    footerCookies: 'Cookies',
+    footerPrivacy: 'Política de privacitat',
+    footerCookies: 'Política de cookies',
     footerManage: 'Canviar cookies',
     warning: '',
     pages: {
@@ -390,7 +390,9 @@ function renderLegalPage(lang) {
   document.querySelector('meta[name="description"]')?.setAttribute('content', page.intro);
 
   document.querySelector('[data-legal-home]').textContent = locale.home;
-  document.getElementById('legal-footer-copy').textContent = locale.footerCopy;
+  document.querySelectorAll('[data-legal-footer="desc"]').forEach((el) => {
+    el.textContent = locale.footerDesc;
+  });
   document.querySelector('[data-legal-footer="legal"]').textContent = locale.footerLegal;
   document.querySelector('[data-legal-footer="privacy"]').textContent = locale.footerPrivacy;
   document.querySelector('[data-legal-footer="cookies"]').textContent = locale.footerCookies;
@@ -424,6 +426,10 @@ function renderLegalPage(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('[data-legal-year]').forEach((el) => {
+    el.textContent = new Date().getFullYear();
+  });
+
   document.querySelectorAll('.legal-lang-btn').forEach((btn) => {
     btn.addEventListener('click', () => renderLegalPage(btn.dataset.lang));
   });
