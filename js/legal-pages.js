@@ -12,7 +12,7 @@ const legalPageTranslations = {
       'aviso-legal': {
         title: 'Aviso legal',
         eyebrow: 'Información legal',
-        intro: 'Este aviso legal regula el acceso y uso del sitio web https://jjodevelopers.cloud/ y de sus contenidos corporativos y editoriales.',
+        intro: 'Este aviso legal regula el acceso y uso del sitio web https://jjodevelopers.com/ y de sus contenidos corporativos y editoriales.',
         sections: [
           {
             title: '1. Titular del sitio web',
@@ -21,7 +21,7 @@ const legalPageTranslations = {
               'Nombre comercial utilizado en la web: <span class="legal-strong">JJO / JJO Developers</span>.',
               'Domicilio profesional o de contacto: <span class="legal-strong">Carrer America, Barcelona</span>.',
               'Correo electrónico de contacto: <span class="legal-strong">jjodevelopers@gmail.com</span>.',
-              'Dominio principal: <span class="legal-strong">jjodevelopers.cloud</span>.'
+              'Dominio principal: <span class="legal-strong">jjodevelopers.com</span>.'
             ]
           },
           {
@@ -155,7 +155,7 @@ const legalPageTranslations = {
       'aviso-legal': {
         title: 'Legal notice',
         eyebrow: 'Legal information',
-        intro: 'This legal notice governs access to and use of the website https://jjodevelopers.cloud/ and its corporate and editorial contents.',
+        intro: 'This legal notice governs access to and use of the website https://jjodevelopers.com/ and its corporate and editorial contents.',
         sections: [
           {
             title: '1. Website owner',
@@ -164,7 +164,7 @@ const legalPageTranslations = {
               'Trade name used on the website: <span class="legal-strong">JJO / JJO Developers</span>.',
               'Professional or contact address: <span class="legal-strong">Carrer America, Barcelona</span>.',
               'Contact email: <span class="legal-strong">jjodevelopers@gmail.com</span>.',
-              'Main domain: <span class="legal-strong">jjodevelopers.cloud</span>.'
+              'Main domain: <span class="legal-strong">jjodevelopers.com</span>.'
             ]
           },
           {
@@ -272,7 +272,7 @@ const legalPageTranslations = {
       'aviso-legal': {
         title: 'Avís legal',
         eyebrow: 'Informació legal',
-        intro: 'Aquest avís legal regula l’accés i l’ús del lloc web https://jjodevelopers.cloud/ i dels seus continguts corporatius i editorials.',
+        intro: 'Aquest avís legal regula l’accés i l’ús del lloc web https://jjodevelopers.com/ i dels seus continguts corporatius i editorials.',
         sections: [
           {
             title: '1. Titular del lloc web',
@@ -281,7 +281,7 @@ const legalPageTranslations = {
               'Nom comercial utilitzat al web: <span class="legal-strong">JJO / JJO Developers</span>.',
               'Domicili professional o de contacte: <span class="legal-strong">Carrer America, Barcelona</span>.',
               'Correu electrònic de contacte: <span class="legal-strong">jjodevelopers@gmail.com</span>.',
-              'Domini principal: <span class="legal-strong">jjodevelopers.cloud</span>.'
+              'Domini principal: <span class="legal-strong">jjodevelopers.com</span>.'
             ]
           },
           {
