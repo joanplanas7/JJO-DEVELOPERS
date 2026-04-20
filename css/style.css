@@ -723,6 +723,39 @@ nav a:hover::after { width: 100%; }
   cursor: not-allowed;
 }
 
+.privacy-note {
+  margin: -2px 0 0;
+  color: #9ca3af;
+  font-size: 0.82em;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.privacy-note a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.privacy-note a:hover {
+  color: #60a5fa;
+}
+
+.privacy-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #d1d5db;
+  font-size: 0.84em;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.privacy-check input {
+  width: auto;
+  margin-top: 3px;
+  accent-color: #60a5fa;
+}
+
 .form-result {
   padding: 12px 16px;
   border-radius: 8px;
