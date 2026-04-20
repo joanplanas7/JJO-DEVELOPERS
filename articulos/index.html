@@ -177,11 +177,12 @@
       color: var(--brand);
     }
   </style>
+  <link rel="stylesheet" href="../css/articles.css">
 </head>
 <body>
   <header>
     <div class="header-wrap">
-      <a class="home-link" href="https://jjodevelopers.com/" data-i18n="home">Volver a JJO</a>
+      <a class="home-link" href="https://jjodevelopers.com/">JJO<span class="logo-dot">.</span></a>
       <div class="lang-switcher">
         <button class="lang-btn active" data-lang="es">ES</button>
         <span class="lang-sep">|</span>
@@ -236,13 +237,16 @@
   </main>
 
   <footer>
+    <div class="archive-footer-brand">
+      <span class="archive-footer-logo">JJO<span class="logo-dot">.</span></span>
+      <p class="archive-footer-copy">© <span data-archive-year></span> — <span id="footer-desc">Desarrollamos soluciones digitales</span></p>
+    </div>
     <div class="footer-links">
       <a href="/aviso-legal.html" data-footer-link="legal">Aviso legal</a>
       <a href="/politica-privacidad.html" data-footer-link="privacy">Política de privacidad</a>
       <a href="/politica-cookies.html" data-footer-link="cookies">Política de cookies</a>
       <button type="button" data-open-cookie-settings data-footer-link="manage">Cambiar cookies</button>
     </div>
-    <p id="footer-text">© 2026 JJO · Desarrollamos soluciones digitales</p>
   </footer>
 
   <script src="../js/cookie-consent.js"></script>
@@ -261,7 +265,7 @@
         metaDescription: 'Listado completo de articulos de JJO Developers sobre IA, automatizacion, ERP y paginas web para empresas.',
         ogTitle: 'Archivo de articulos | JJO Developers',
         ogDescription: 'Todos los articulos publicados por JJO Developers en un solo indice.',
-        footer: '© 2026 JJO · Desarrollamos soluciones digitales'
+        footerDesc: 'Desarrollamos soluciones digitales'
       },
       en: {
         title: 'Articles archive',
@@ -275,7 +279,7 @@
         metaDescription: 'Complete list of JJO Developers articles about AI, automation, ERP and business websites.',
         ogTitle: 'Articles archive | JJO Developers',
         ogDescription: 'All published JJO Developers articles in one index.',
-        footer: '© 2026 JJO · We develop digital solutions'
+        footerDesc: 'We develop digital solutions'
       },
       ca: {
         title: 'Arxiu d articles',
@@ -289,7 +293,7 @@
         metaDescription: 'Llistat complet d articles de JJO Developers sobre IA, automatitzacio, ERP i webs per empreses.',
         ogTitle: 'Arxiu d articles | JJO Developers',
         ogDescription: 'Tots els articles publicats per JJO Developers en un sol index.',
-        footer: '© 2026 JJO · Desenvolupem solucions digitals'
+        footerDesc: 'Desenvolupem solucions digitals'
       }
     };
 
@@ -304,12 +308,11 @@
 
       document.querySelector('[data-i18n="title"]').textContent = data.title;
       document.querySelector('[data-i18n="lead"]').textContent = data.lead;
-      document.querySelector('[data-i18n="home"]').textContent = data.home;
       document.querySelector('[data-footer-link="legal"]').textContent = data.footerLegal;
       document.querySelector('[data-footer-link="privacy"]').textContent = data.footerPrivacy;
       document.querySelector('[data-footer-link="cookies"]').textContent = data.footerCookies;
       document.querySelector('[data-footer-link="manage"]').textContent = data.footerManage;
-      document.getElementById('footer-text').textContent = data.footer;
+      document.getElementById('footer-desc').textContent = data.footerDesc;
 
       document.title = data.metaTitle;
       document.querySelector('meta[name="description"]').setAttribute('content', data.metaDescription);
@@ -339,6 +342,10 @@
 
     document.querySelectorAll('.lang-btn').forEach((btn) => {
       btn.addEventListener('click', () => applyArchiveLanguage(btn.dataset.lang));
+    });
+
+    document.querySelectorAll('[data-archive-year]').forEach((el) => {
+      el.textContent = new Date().getFullYear();
     });
 
     applyArchiveLanguage(localStorage.getItem('jjo-lang') || 'es');

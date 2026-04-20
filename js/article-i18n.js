@@ -1,7 +1,7 @@
 const articleFooterByLang = {
-  es: '© 2026 JJO · Desarrollamos soluciones digitales',
-  en: '© 2026 JJO · We develop digital solutions',
-  ca: '© 2026 JJO · Desenvolupem solucions digitals'
+  es: 'Desarrollamos soluciones digitales',
+  en: 'We develop digital solutions',
+  ca: 'Desenvolupem solucions digitals'
 };
 
 const articleFooterLinksByLang = {
@@ -25,9 +25,25 @@ const articleFooterLinksByLang = {
   }
 };
 
+const articleHomeByLang = {
+  es: 'Volver a JJO',
+  en: 'Back to JJO',
+  ca: 'Tornar a JJO'
+};
+
 function getArticleSlug() {
   const file = window.location.pathname.split('/').pop() || '';
   return file.replace('.html', '');
+}
+
+function injectArticleDesignStyles() {
+  if (document.querySelector('link[href$="articles.css"]')) return;
+
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = '../css/articles.css';
+  link.dataset.jjoArticleDesign = 'true';
+  document.head.appendChild(link);
 }
 
 function injectArticleLangStyles() {
@@ -36,26 +52,8 @@ function injectArticleLangStyles() {
   const style = document.createElement('style');
   style.id = 'article-lang-styles';
   style.textContent = `
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    header a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    header a::before {
-      content: '\\2190';
-      color: inherit;
-    }
-
     .articulo-body li::before {
-      content: '\\2192' !important;
+      content: '->' !important;
     }
 
     .article-lang-switcher {
@@ -65,15 +63,15 @@ function injectArticleLangStyles() {
       flex-wrap: wrap;
       margin-left: auto;
       padding: 6px 10px;
-      border: 1px solid #1f2937;
+      border: 1px solid #1f1f1f;
       border-radius: 999px;
-      background: #0f172a;
+      background: rgba(20, 20, 20, 0.92);
     }
 
     .article-lang-btn {
       background: none;
       border: none;
-      color: #666;
+      color: #888;
       font-size: 0.8rem;
       font-weight: 700;
       font-family: inherit;
@@ -84,40 +82,16 @@ function injectArticleLangStyles() {
     }
 
     .article-lang-btn.active {
-      color: #60a5fa;
+      color: #b8f000;
     }
 
     .article-lang-btn:hover {
-      color: #93c5fd;
+      color: #b8f000;
     }
 
     .article-lang-sep {
-      color: #333;
+      color: #444;
       user-select: none;
-    }
-
-    .article-footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px 18px;
-      margin-bottom: 12px;
-    }
-
-    .article-footer-links a,
-    .article-footer-links button {
-      border: none;
-      background: none;
-      padding: 0;
-      color: #8b95a7;
-      font: inherit;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .article-footer-links a:hover,
-    .article-footer-links button:hover {
-      color: #60a5fa;
     }
 
     @media (max-width: 640px) {
@@ -136,10 +110,18 @@ function injectArticleLangStyles() {
 }
 
 function ensureArticleLangSwitcher(onChange) {
-  if (document.querySelector('.article-lang-switcher')) return;
-
   const header = document.querySelector('header');
   if (!header) return;
+
+  if (!document.querySelector('.article-home-link')) {
+    const homeButton = document.createElement('a');
+    homeButton.className = 'article-home-link';
+    homeButton.href = 'https://jjodevelopers.com/';
+    homeButton.textContent = articleHomeByLang.es;
+    header.prepend(homeButton);
+  }
+
+  if (document.querySelector('.article-lang-switcher')) return;
 
   const wrapper = document.createElement('div');
   wrapper.className = 'article-lang-switcher';
@@ -161,7 +143,8 @@ function ensureArticleLangSwitcher(onChange) {
 function normalizeArticleChrome() {
   const homeLink = document.querySelector('header a');
   if (homeLink) {
-    homeLink.textContent = 'JJO';
+    homeLink.classList.add('article-brand-link');
+    homeLink.innerHTML = 'JJO<span class="logo-dot">.</span>';
   }
 }
 
@@ -247,17 +230,29 @@ function setActiveArticleLang(lang) {
   document.querySelectorAll('.article-lang-btn').forEach((btn) => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
+
+  const homeButton = document.querySelector('.article-home-link');
+  if (homeButton) {
+    homeButton.textContent = articleHomeByLang[lang] || articleHomeByLang.es;
+  }
 }
 
 function ensureArticleFooterStructure() {
   const footer = document.querySelector('footer');
-  if (!footer || footer.querySelector('.article-footer-copy')) return;
+  if (!footer) return;
+  if (footer.querySelector('.article-footer-brand')) {
+    footer.querySelectorAll('[data-article-year]').forEach((el) => {
+      el.textContent = new Date().getFullYear();
+    });
+    return;
+  }
 
-  const existingCopy = footer.querySelector('p')?.innerHTML || footer.textContent.trim();
-
-  const copy = document.createElement('p');
-  copy.className = 'article-footer-copy';
-  copy.innerHTML = normalizeCorruptedText(existingCopy);
+  const brand = document.createElement('div');
+  brand.className = 'article-footer-brand';
+  brand.innerHTML = `
+    <span class="article-footer-logo">JJO<span class="logo-dot">.</span></span>
+    <p class="article-footer-copy">© <span data-article-year></span> — <span data-article-footer-desc>Desarrollamos soluciones digitales</span></p>
+  `;
 
   const links = document.createElement('div');
   links.className = 'article-footer-links';
@@ -269,16 +264,25 @@ function ensureArticleFooterStructure() {
   `;
 
   footer.innerHTML = '';
+  footer.appendChild(brand);
   footer.appendChild(links);
-  footer.appendChild(copy);
+
+  footer.querySelectorAll('[data-article-year]').forEach((el) => {
+    el.textContent = new Date().getFullYear();
+  });
 }
 
 function setArticleFooterLinks(lang) {
   const labels = articleFooterLinksByLang[lang] || articleFooterLinksByLang.es;
-  document.querySelector('[data-article-footer="legal"]').textContent = labels.legal;
-  document.querySelector('[data-article-footer="privacy"]').textContent = labels.privacy;
-  document.querySelector('[data-article-footer="cookies"]').textContent = labels.cookies;
-  document.querySelector('[data-article-footer="manage"]').textContent = labels.manage;
+  const legal = document.querySelector('[data-article-footer="legal"]');
+  const privacy = document.querySelector('[data-article-footer="privacy"]');
+  const cookies = document.querySelector('[data-article-footer="cookies"]');
+  const manage = document.querySelector('[data-article-footer="manage"]');
+
+  if (legal) legal.textContent = labels.legal;
+  if (privacy) privacy.textContent = labels.privacy;
+  if (cookies) cookies.textContent = labels.cookies;
+  if (manage) manage.textContent = labels.manage;
 }
 
 function loadComplianceScript() {
@@ -323,8 +327,13 @@ function setArticleLanguage(lang, spanishSnapshot, articleTranslations) {
   }
 
   const footerEl = document.querySelector('.article-footer-copy');
+  const footerDescEl = document.querySelector('[data-article-footer-desc]');
+  if (footerDescEl) {
+    footerDescEl.textContent = articleFooterByLang[lang] || articleFooterByLang.es;
+  }
   if (footerEl) {
-    footerEl.innerHTML = articleFooterByLang[lang] || articleFooterByLang.es;
+    const yearEl = footerEl.querySelector('[data-article-year]');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
 
   setArticleFooterLinks(lang);
@@ -335,12 +344,14 @@ function setArticleLanguage(lang, spanishSnapshot, articleTranslations) {
 document.addEventListener('DOMContentLoaded', () => {
   const slug = getArticleSlug();
   const articleTranslations = window.articleTranslations?.[slug];
-  if (!articleTranslations) return;
 
+  injectArticleDesignStyles();
   injectArticleLangStyles();
   normalizeArticleChrome();
   ensureArticleFooterStructure();
   loadComplianceScript();
+
+  if (!articleTranslations) return;
 
   const spanishSnapshot = {
     metaTitle: normalizeCorruptedText(document.title),

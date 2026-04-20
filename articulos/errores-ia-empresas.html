@@ -181,7 +181,8 @@
       }
     }
     </style>
-  </head>
+    <link rel="stylesheet" href="../css/articles.css">
+</head>
   <body>
     <header>
       <a href="https://jjodevelopers.com/">
@@ -293,9 +294,16 @@
       </div>
     </div>
     <footer>
-      <p>
-        © 2026 JJO · Desarrollamos soluciones digitales
-      </p>
+      <div class="article-footer-brand">
+        <span class="article-footer-logo">JJO<span class="logo-dot">.</span></span>
+        <p class="article-footer-copy">© <span data-article-year></span> — <span data-article-footer-desc>Desarrollamos soluciones digitales</span></p>
+      </div>
+      <div class="article-footer-links">
+        <a href="/aviso-legal.html" data-article-footer="legal">Aviso legal</a>
+        <a href="/politica-privacidad.html" data-article-footer="privacy">Política de privacidad</a>
+        <a href="/politica-cookies.html" data-article-footer="cookies">Política de cookies</a>
+        <button type="button" data-open-cookie-settings data-article-footer="manage">Cambiar cookies</button>
+      </div>
     </footer>
     <script src="../js/article-translations.js">
     </script>
