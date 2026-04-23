@@ -1265,6 +1265,12 @@ body.cursor-click .cursor-dot {
 }
 
 @media (max-width: 768px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   #header { padding: 0 20px; }
 
   .container { padding: 0 20px; }
@@ -1301,9 +1307,61 @@ body.cursor-click .cursor-dot {
 
   .section { padding: 72px 0; }
 
-  .hero { padding: 60px 20px 72px; }
+  .hero {
+    padding: 60px 20px 72px;
+    text-align: center;
+  }
 
-  .hero-title { font-size: 2.2rem; }
+  .hero-pretitle {
+    font-size: 0;
+  }
+
+  html[lang="es"] .hero-pretitle::after {
+    content: "Desarrollo & Automatización";
+  }
+
+  html[lang="en"] .hero-pretitle::after {
+    content: "Development & Automation";
+  }
+
+  html[lang="ca"] .hero-pretitle::after {
+    content: "Desenvolupament i Automatització";
+  }
+
+  .hero-pretitle::after {
+    font-size: 0.82rem;
+  }
+
+  .hero-title {
+    width: 100%;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 38px;
+    font-size: clamp(2.4rem, 10.4vw, 3.4rem);
+    line-height: 0.98;
+    text-align: center;
+  }
+
+  .hero-title-line {
+    display: block;
+    text-align: center;
+  }
+
+  .hero-title-line:first-child {
+    white-space: nowrap;
+  }
+
+  .hero-ticker,
+  .hero-ctas {
+    justify-content: center;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 44px;
+  }
 
   .sobre-text,
   .sobre-equipo-intro,
@@ -1313,7 +1371,8 @@ body.cursor-click .cursor-dot {
   }
 
   .service-row {
-    grid-template-columns: 48px 1fr 40px;
+    grid-template-columns: 42px minmax(0, 1fr) 32px;
+    gap: 18px;
     border-left-color: var(--accent);
   }
 
@@ -1348,7 +1407,7 @@ body.cursor-click .cursor-dot {
 }
 
 @media (max-width: 480px) {
-  .hero-title { font-size: 1.9rem; }
+  .hero-title { font-size: clamp(2.25rem, 9.8vw, 2.8rem); }
 
   .sec-title { font-size: 1.5rem; }
 

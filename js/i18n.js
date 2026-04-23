@@ -12,7 +12,7 @@ const translations = {
     'nav.proceso': 'Cómo trabajamos',
     'nav.contacto': 'Contacto',
 
-    'hero.title': 'Soluciones digitales para tu negocio',
+    'hero.title': '<span class="hero-title-line">Soluciones digitales</span> <span class="hero-title-line">para tu negocio</span>',
     'hero.pretitle': '— Desarrollo & Automatización',
     'hero.desc':  'Ayudamos a tu empresa a digitalizarse con soluciones prácticas y personalizadas.',
     'hero.btn':   'Contáctanos',
@@ -178,7 +178,7 @@ const translations = {
     'nav.proceso': 'How we work',
     'nav.contacto': 'Contact',
 
-    'hero.title': 'Digital solutions for your business',
+    'hero.title': '<span class="hero-title-line">Digital solutions</span> <span class="hero-title-line">for your business</span>',
     'hero.pretitle': '— Development & Automation',
     'hero.desc':  'We help your business go digital with practical, personalized solutions.',
     'hero.btn':   'Contact us',
@@ -344,7 +344,7 @@ const translations = {
     'nav.proceso': 'Com treballem',
     'nav.contacto': 'Contacte',
 
-    'hero.title': 'Solucions digitals per al teu negoci',
+    'hero.title': '<span class="hero-title-line">Solucions digitals</span> <span class="hero-title-line">per al teu negoci</span>',
     'hero.pretitle': '— Desenvolupament i Automatització',
     'hero.desc':  'Ajudem la teva empresa a digitalitzar-se amb solucions pràctiques i personalitzades.',
     'hero.btn':   "Contacta'ns",
