@@ -1306,10 +1306,19 @@ body.cursor-click .cursor-dot {
   .hero-title { font-size: 2.2rem; }
 
   .service-row {
-    grid-template-columns: 48px 1fr;
+    grid-template-columns: 48px 1fr 40px;
+    border-left-color: var(--accent);
   }
 
-  .service-icon { display: none; }
+  .service-row .service-num {
+    color: var(--accent);
+  }
+
+  .service-icon {
+    display: block;
+    color: var(--accent);
+    transform: translateY(-2px);
+  }
 
   .form-row { grid-template-columns: 1fr; }
 
@@ -1321,7 +1330,14 @@ body.cursor-click .cursor-dot {
     text-align: center;
   }
 
-  .proceso-item { padding: 32px 24px; }
+  .proceso-item {
+    padding: 32px 24px;
+    background: var(--surface);
+  }
+
+  .proceso-item .proceso-top i {
+    color: var(--accent);
+  }
 }
 
 @media (max-width: 480px) {
