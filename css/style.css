@@ -1393,6 +1393,10 @@ body.cursor-click .cursor-dot {
     margin-bottom: 36px;
   }
 
+  .marquee-strip {
+    margin-top: -10px;
+  }
+
   .sobre-text,
   .sobre-equipo-intro,
   .equipo-desc {
