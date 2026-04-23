@@ -1308,8 +1308,10 @@ body.cursor-click .cursor-dot {
   .section { padding: 72px 0; }
 
   .hero {
-    padding: 60px 20px 72px;
+    min-height: calc(100svh - var(--header-h) - 48px);
+    padding: 28px 20px 34px;
     text-align: center;
+    align-items: center;
   }
 
   .hero-content {
@@ -1321,7 +1323,7 @@ body.cursor-click .cursor-dot {
   .hero-pretitle {
     font-size: 0;
     order: 1;
-    margin-bottom: 28px;
+    margin-bottom: 32px;
   }
 
   html[lang="es"] .hero-pretitle::after {
@@ -1346,7 +1348,7 @@ body.cursor-click .cursor-dot {
     max-width: 420px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 38px;
+    margin-bottom: 44px;
     font-size: clamp(2.4rem, 10.4vw, 3.4rem);
     line-height: 0.98;
     text-align: center;
@@ -1368,7 +1370,7 @@ body.cursor-click .cursor-dot {
 
   .hero-ticker {
     order: 4;
-    margin-bottom: 34px;
+    margin-bottom: 40px;
   }
 
   .hero-ticker .ticker-wrap {
@@ -1388,7 +1390,7 @@ body.cursor-click .cursor-dot {
     order: 3;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px;
+    margin-bottom: 36px;
   }
 
   .sobre-text,
