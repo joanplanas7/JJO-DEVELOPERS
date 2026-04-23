@@ -1312,8 +1312,16 @@ body.cursor-click .cursor-dot {
     text-align: center;
   }
 
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .hero-pretitle {
     font-size: 0;
+    order: 1;
+    margin-bottom: 28px;
   }
 
   html[lang="es"] .hero-pretitle::after {
@@ -1329,10 +1337,11 @@ body.cursor-click .cursor-dot {
   }
 
   .hero-pretitle::after {
-    font-size: 0.82rem;
+    font-size: 0.95rem;
   }
 
   .hero-title {
+    order: 2;
     width: 100%;
     max-width: 420px;
     margin-left: auto;
@@ -1357,10 +1366,29 @@ body.cursor-click .cursor-dot {
     justify-content: center;
   }
 
+  .hero-ticker {
+    order: 4;
+    margin-bottom: 34px;
+  }
+
+  .hero-ticker .ticker-wrap {
+    min-width: 0;
+    justify-items: center;
+  }
+
+  .hero-ticker .ticker-label {
+    color: var(--muted);
+  }
+
+  .hero-ctas {
+    order: 5;
+  }
+
   .hero-desc {
+    order: 3;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 44px;
+    margin-bottom: 30px;
   }
 
   .sobre-text,
