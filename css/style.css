@@ -1406,7 +1406,7 @@ body.cursor-click .cursor-dot {
 
   .service-row {
     grid-template-columns: 42px minmax(0, 1fr) 32px;
-    gap: 18px;
+    gap: 0px;
     border-left-color: var(--accent);
   }
 
