@@ -12,8 +12,8 @@ menuBtn.addEventListener("click", () => {
   menuBtn.classList.toggle("open");
 });
 
-nav.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
+nav.querySelectorAll("a, .mobile-lang-switcher .lang-btn").forEach(item => {
+  item.addEventListener("click", () => {
     nav.classList.remove("show");
     menuBtn.classList.remove("open");
   });

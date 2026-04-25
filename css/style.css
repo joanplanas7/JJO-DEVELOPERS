@@ -104,6 +104,7 @@ nav a:hover { color: var(--text); }
 nav a:hover::after { width: 100%; }
 
 .lang-switcher { display: flex; align-items: center; gap: 4px; }
+.mobile-lang-switcher { display: none; }
 
 .lang-btn {
   background: none;
@@ -1303,7 +1304,22 @@ body.cursor-click .cursor-dot {
 
   .menu-btn { display: flex; }
 
-  .lang-switcher { display: none; }
+  .desktop-lang-switcher { display: none; }
+
+  .mobile-lang-switcher {
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 40px);
+    margin-top: 10px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+  }
+
+  .mobile-lang-switcher .lang-btn {
+    min-width: 44px;
+    min-height: 34px;
+    font-size: 0.82rem;
+  }
 
   .section { padding: 72px 0; }
 
