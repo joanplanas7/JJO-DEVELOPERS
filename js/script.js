@@ -99,6 +99,7 @@ window.addEventListener('jjo:language-changed', animateHeroPretitle);
   const CONNECT  = 110;    // max distance to draw a line between particles
   const MOUSE_R  = 140;    // mouse influence radius
   const CLICK_R  = 220;    // click shockwave radius
+  const EDGE_BOUNCE = 0.82;
   let W, H, particles = [];
   const mouse = { x: -9999, y: -9999 };
 
@@ -118,6 +119,7 @@ window.addEventListener('jjo:language-changed', animateHeroPretitle);
       this.r  = Math.random() * 1.8 + 1;
       this.alpha = Math.random() * 0.45 + 0.2;
       this.phase = Math.random() * Math.PI * 2; // for pulse
+      this.drift = Math.random() * Math.PI * 2;
     }
 
     update(t) {
@@ -131,20 +133,25 @@ window.addEventListener('jjo:language-changed', animateHeroPretitle);
         this.vy += (dy / d) * f;
       }
 
+      /* Ambient drift keeps the movement from feeling mechanical */
+      const driftT = t * 0.00065 + this.drift;
+      this.vx += Math.cos(driftT) * 0.018;
+      this.vy += Math.sin(driftT * 1.17) * 0.018;
+
       /* Damping + speed cap */
-      this.vx *= 0.96;
-      this.vy *= 0.96;
+      this.vx *= 0.975;
+      this.vy *= 0.975;
       const spd = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
-      if (spd > 3.5) { this.vx = this.vx / spd * 3.5; this.vy = this.vy / spd * 3.5; }
+      if (spd > 4.2) { this.vx = this.vx / spd * 4.2; this.vy = this.vy / spd * 4.2; }
 
       this.x += this.vx;
       this.y += this.vy;
 
-      /* Soft bounce */
-      if (this.x < 0)  { this.x = 0;  this.vx = Math.abs(this.vx); }
-      if (this.x > W)  { this.x = W;  this.vx = -Math.abs(this.vx); }
-      if (this.y < 0)  { this.y = 0;  this.vy = Math.abs(this.vy); }
-      if (this.y > H)  { this.y = H;  this.vy = -Math.abs(this.vy); }
+      /* Elastic edge bounce */
+      if (this.x < 0)  { this.x = 0;  this.vx = Math.abs(this.vx) * EDGE_BOUNCE; this.vy += (Math.random() - 0.5) * 0.18; }
+      if (this.x > W)  { this.x = W;  this.vx = -Math.abs(this.vx) * EDGE_BOUNCE; this.vy += (Math.random() - 0.5) * 0.18; }
+      if (this.y < 0)  { this.y = 0;  this.vy = Math.abs(this.vy) * EDGE_BOUNCE; this.vx += (Math.random() - 0.5) * 0.18; }
+      if (this.y > H)  { this.y = H;  this.vy = -Math.abs(this.vy) * EDGE_BOUNCE; this.vx += (Math.random() - 0.5) * 0.18; }
 
       /* Pulse size */
       this.rr = this.r + Math.sin(t * 0.002 + this.phase) * 0.6;
@@ -255,6 +262,89 @@ window.addEventListener('jjo:language-changed', animateHeroPretitle);
 
   init();
   requestAnimationFrame(animate);
+})();
+
+// ─── FLOATING HERO BADGES ─────────────────────────────────────
+(function initHeroBadges() {
+  const box = document.querySelector('.hero-visual');
+  const badges = [...document.querySelectorAll('.hero-badge')];
+  if (!box || badges.length === 0) return;
+
+  const states = badges.map((badge, index) => ({
+    badge,
+    x: 0,
+    y: 0,
+    vx: (index % 2 === 0 ? 1 : -1) * (0.24 + Math.random() * 0.18),
+    vy: (index < 2 ? 1 : -1) * (0.2 + Math.random() * 0.16),
+    phase: Math.random() * Math.PI * 2,
+    spin: Math.random() > 0.5 ? 1 : -1
+  }));
+
+  function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
+  }
+
+  function placeBadges() {
+    const boxRect = box.getBoundingClientRect();
+    states.forEach((state) => {
+      const badgeRect = state.badge.getBoundingClientRect();
+      const currentLeft = parseFloat(getComputedStyle(state.badge).left) || 0;
+      const currentTop = parseFloat(getComputedStyle(state.badge).top) || 0;
+      state.x = clamp(currentLeft, 0, Math.max(0, boxRect.width - badgeRect.width));
+      state.y = clamp(currentTop, 0, Math.max(0, boxRect.height - badgeRect.height));
+      state.badge.style.right = 'auto';
+      state.badge.style.bottom = 'auto';
+    });
+  }
+
+  let lastTime = performance.now();
+  function animateBadges(now) {
+    const dt = Math.min((now - lastTime) / 16.67, 2);
+    lastTime = now;
+
+    const boxRect = box.getBoundingClientRect();
+    states.forEach((state) => {
+      const badgeRect = state.badge.getBoundingClientRect();
+      const maxX = Math.max(0, boxRect.width - badgeRect.width);
+      const maxY = Math.max(0, boxRect.height - badgeRect.height);
+      const drift = now * 0.001 + state.phase;
+
+      state.vx += Math.cos(drift * 0.75) * 0.006 * dt;
+      state.vy += Math.sin(drift * 0.9) * 0.006 * dt;
+
+      const speed = Math.hypot(state.vx, state.vy);
+      if (speed > 0.62) {
+        state.vx = state.vx / speed * 0.62;
+        state.vy = state.vy / speed * 0.62;
+      }
+
+      state.x += state.vx * dt;
+      state.y += state.vy * dt;
+
+      if (state.x <= 0 || state.x >= maxX) {
+        state.x = clamp(state.x, 0, maxX);
+        state.vx *= -1.08;
+        state.vy += (Math.random() - 0.5) * 0.08;
+      }
+      if (state.y <= 0 || state.y >= maxY) {
+        state.y = clamp(state.y, 0, maxY);
+        state.vy *= -1.08;
+        state.vx += (Math.random() - 0.5) * 0.08;
+      }
+
+      const bob = Math.sin(drift * 1.8) * 3;
+      const tilt = (state.vx * 5 + Math.sin(drift) * 1.5) * state.spin;
+      state.badge.style.left = `${state.x}px`;
+      state.badge.style.top = `${state.y}px`;
+      state.badge.style.transform = `translate3d(0, ${bob}px, 0) rotate(${tilt}deg)`;
+    });
+
+    requestAnimationFrame(animateBadges);
+  }
+
+  placeBadges();
+  new ResizeObserver(placeBadges).observe(box);
+  requestAnimationFrame(animateBadges);
 })();
 
 // ─── MAGNETIC BUTTONS ─────────────────────────────────────────

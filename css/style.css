@@ -264,23 +264,15 @@ nav a:hover::after { width: 100%; }
   white-space: nowrap;
   pointer-events: none;
   box-shadow: 0 4px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.04);
+  will-change: left, top, transform;
 }
 
 .hero-badge i { color: var(--accent); font-size: 0.85rem; }
 
-.badge--erp  { top: 18%;    left: 6%;   animation: floatA 4.2s ease-in-out infinite alternate; }
-.badge--ia   { top: 10%;    right: 9%;  animation: floatB 3.8s ease-in-out infinite alternate; }
-.badge--web  { bottom: 26%; left: 10%;  animation: floatA 4.6s ease-in-out infinite alternate; animation-delay: .5s; }
-.badge--auto { bottom: 16%; right: 7%;  animation: floatB 4s   ease-in-out infinite alternate; animation-delay: .8s; }
-
-@keyframes floatA {
-  from { transform: translateY(0px)   rotate(-1deg); }
-  to   { transform: translateY(-12px) rotate(1deg); }
-}
-@keyframes floatB {
-  from { transform: translateY(0px)   rotate(1deg); }
-  to   { transform: translateY(-10px) rotate(-1.5deg); }
-}
+.badge--erp  { top: 18%; left: 6%; }
+.badge--ia   { top: 10%; left: 70%; }
+.badge--web  { top: 58%; left: 10%; }
+.badge--auto { top: 70%; left: 66%; }
 
 /* ─── SECTIONS ───────────────────────────────────────────────── */
 .section {
