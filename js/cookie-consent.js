@@ -92,7 +92,7 @@
   }
 
   function loadAnalytics() {
-    if (analyticsLoaded || !hasAnalyticsConsent() || document.body?.dataset.enableAnalytics !== 'true') return;
+    if (analyticsLoaded || !hasAnalyticsConsent()) return;
     analyticsLoaded = true;
 
     window.dataLayer = window.dataLayer || [];
