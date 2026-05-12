@@ -403,7 +403,13 @@ nav a:hover::after { width: 100%; }
   transition: transform 0.4s;
 }
 
+.equipo-foto--joan {
+  object-position: 60% top;
+  transform-origin: 60% top;
+}
+
 .equipo-card:hover .equipo-foto { transform: scale(1.03); }
+
 
 .equipo-info {
   padding: 32px 36px;
