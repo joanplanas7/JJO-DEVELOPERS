@@ -23,3 +23,12 @@ El historial reciente usa mensajes cortos y directos en español, como `fix trad
 
 ## Seguridad y contenido
 No subas secretos ni claves API. Las integraciones externas, como el endpoint del formulario de contacto, deben seguir siendo configurables y conviene probarlas después de cualquier cambio. Al añadir contenido, conserva URLs canónicas, metadatos y enlazado interno para no degradar el SEO.
+
+
+## Crear nuevos articulos.
+- Siempre revisa los articulos ya creados para no generar de repetidos.
+- Los tienes que añadir el sitemap
+- Todos los articulos deben tener la misma estructura, revisate la estructura de una para hacerlo igual.
+- Deben onculuir un boton aarriba para volver a tras, igual que los que ya estan creados.
+- Todos deben incluir los botones de traduccion (article-translations.js). 
+- El header debe ser identico al de los otros articulos
